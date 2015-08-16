@@ -1,17 +1,17 @@
-From d90bfc554995e4f8448cabb6b46ea83083d39a22 Mon Sep 17 00:00:00 2001
+From d0da852485750019dda6eff79bebe5794c01aedb Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Sun, 16 Aug 2015 16:08:27 +0000
-Subject: [PATCH 2/3] Respect the browser-configured fonts
+Subject: [PATCH 2/4] Respect the browser-configured fonts
 
 ---
- assets/stylesheets/base/variables.scss | 4 ++--
- assets/stylesheets/pages/help.scss     | 2 +-
+ app/assets/stylesheets/base/variables.scss | 4 ++--
+ app/assets/stylesheets/pages/help.scss     | 2 +-
  2 files changed, 3 insertions(+), 3 deletions(-)
 
-diff --git a/assets/stylesheets/base/variables.scss b/assets/stylesheets/base/variables.scss
+diff --git a/app/assets/stylesheets/base/variables.scss b/app/assets/stylesheets/base/variables.scss
 index 08f153d..f83ca47 100644
---- a/assets/stylesheets/base/variables.scss
-+++ b/assets/stylesheets/base/variables.scss
+--- a/app/assets/stylesheets/base/variables.scss
++++ b/app/assets/stylesheets/base/variables.scss
 @@ -33,5 +33,5 @@ $deleted: #f77;
  /*
   * Fonts
@@ -20,10 +20,10 @@ index 08f153d..f83ca47 100644
 -$regular_font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 +$monospace_font: monospace;
 +$regular_font: sans-serif;
-diff --git a/assets/stylesheets/pages/help.scss b/assets/stylesheets/pages/help.scss
+diff --git a/app/assets/stylesheets/pages/help.scss b/app/assets/stylesheets/pages/help.scss
 index 6da7a25..0ef2b14 100644
---- a/assets/stylesheets/pages/help.scss
-+++ b/assets/stylesheets/pages/help.scss
+--- a/app/assets/stylesheets/pages/help.scss
++++ b/app/assets/stylesheets/pages/help.scss
 @@ -50,7 +50,7 @@
    .key {
      @extend .label;

@@ -1,0 +1,25 @@
+From b4f77df5b088f6edcae0af7b0cd363fdd99a8d0c Mon Sep 17 00:00:00 2001
+From: root <root@gitlab>
+Date: Sun, 16 Aug 2015 21:12:45 +0000
+Subject: [PATCH 4/4] Less pagination for less annoyance
+
+---
+ config/initializers/kaminari_config.rb | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/config/initializers/kaminari_config.rb b/config/initializers/kaminari_config.rb
+index 3cbe9a0..d2e064e 100644
+--- a/config/initializers/kaminari_config.rb
++++ b/config/initializers/kaminari_config.rb
+@@ -1,6 +1,6 @@
+ Kaminari.configure do |config|
+-  config.default_per_page = 20
+-  config.max_per_page = 100
++  config.default_per_page = 200
++  config.max_per_page = 200
+   # config.window = 4
+   # config.outer_window = 0
+   # config.left = 0
+-- 
+1.9.1
+
