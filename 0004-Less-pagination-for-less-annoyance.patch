@@ -1,12 +1,26 @@
-From b4f77df5b088f6edcae0af7b0cd363fdd99a8d0c Mon Sep 17 00:00:00 2001
+From b4fdd1fd25c07d3aba41ae80f711f5de4b38b122 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Sun, 16 Aug 2015 21:12:45 +0000
 Subject: [PATCH 4/4] Less pagination for less annoyance
 
 ---
- config/initializers/kaminari_config.rb | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+ app/controllers/application_controller.rb | 2 +-
+ config/initializers/kaminari_config.rb    | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
 
+diff --git a/app/controllers/application_controller.rb b/app/controllers/application_controller.rb
+index 362b03e..09abd96 100644
+--- a/app/controllers/application_controller.rb
++++ b/app/controllers/application_controller.rb
+@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
+   include GitlabRoutingHelper
+   include PageLayoutHelper
+ 
+-  PER_PAGE = 20
++  PER_PAGE = 200
+ 
+   before_action :authenticate_user_from_token!
+   before_action :authenticate_user!
 diff --git a/config/initializers/kaminari_config.rb b/config/initializers/kaminari_config.rb
 index 3cbe9a0..d2e064e 100644
 --- a/config/initializers/kaminari_config.rb

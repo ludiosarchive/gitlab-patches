@@ -3,6 +3,7 @@
 cp *.patch /opt/gitlab/embedded/service/gitlab-rails
 cd /opt/gitlab/embedded/service/gitlab-rails
 git am *.patch
+chmod -R a+rX app config
 
 ### Rebuild compiled CSS files
 
