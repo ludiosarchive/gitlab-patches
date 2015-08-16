@@ -1,1 +1,16 @@
-Apply in /opt/gitlab/embedded/service/gitlab-rails/app
+### Apply patches
+
+cp *.patch /opt/gitlab/embedded/service/gitlab-rails/app
+cd /opt/gitlab/embedded/service/gitlab-rails/app
+git am *.patch
+
+### Rebuild compiled CSS files
+
+# Need to let `git` write to assets/ because gitlab-rake runs as `git`,
+# while `assets/` is owned by root
+setfacl -R -m u:git:rwX /opt/gitlab/embedded/service/gitlab-rails/public/assets/
+gitlab-rake assets:precompile RAILS_ENV=production
+chmod -R a+rX /opt/gitlab/embedded/service/gitlab-rails/public/assets/
+setfacl -R -x u:git /opt/gitlab/embedded/service/gitlab-rails/public/assets/
+
+gitlab-ctl restart
