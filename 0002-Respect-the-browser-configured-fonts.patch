@@ -1,0 +1,38 @@
+From d90bfc554995e4f8448cabb6b46ea83083d39a22 Mon Sep 17 00:00:00 2001
+From: root <root@gitlab>
+Date: Sun, 16 Aug 2015 16:08:27 +0000
+Subject: [PATCH 2/2] Respect the browser-configured fonts
+
+---
+ assets/stylesheets/base/variables.scss | 4 ++--
+ assets/stylesheets/pages/help.scss     | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/assets/stylesheets/base/variables.scss b/assets/stylesheets/base/variables.scss
+index 08f153d..f83ca47 100644
+--- a/assets/stylesheets/base/variables.scss
++++ b/assets/stylesheets/base/variables.scss
+@@ -33,5 +33,5 @@ $deleted: #f77;
+ /*
+  * Fonts
+  */
+-$monospace_font: 'Menlo', 'Liberation Mono', 'Consolas', 'DejaVu Sans Mono', 'Ubuntu Mono', 'Courier New', 'andale mono', 'lucida console', monospace;
+-$regular_font: "Helvetica Neue", Helvetica, Arial, sans-serif;
++$monospace_font: monospace;
++$regular_font: sans-serif;
+diff --git a/assets/stylesheets/pages/help.scss b/assets/stylesheets/pages/help.scss
+index 6da7a25..0ef2b14 100644
+--- a/assets/stylesheets/pages/help.scss
++++ b/assets/stylesheets/pages/help.scss
+@@ -50,7 +50,7 @@
+   .key {
+     @extend .label;
+     @extend .label-inverse;
+-    font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
++    font: 11px monospace;
+     padding: 3px 5px;
+   }
+ }
+-- 
+1.9.1
+
