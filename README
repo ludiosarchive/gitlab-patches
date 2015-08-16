@@ -12,7 +12,7 @@ setfacl -R -m u:git:rwX /opt/gitlab/embedded/service/gitlab-rails/public/assets/
 gitlab-rake assets:precompile RAILS_ENV=production
 chmod -R a+rX /opt/gitlab/embedded/service/gitlab-rails/public/assets/
 
-# Remove git's temporary write access
+# Remove git's write access
 setfacl -R -x u:git /opt/gitlab/embedded/service/gitlab-rails/public/assets/
 
 gitlab-ctl restart
