@@ -6,11 +6,13 @@ git am *.patch
 
 ### Rebuild compiled CSS files
 
-# Need to let `git` write to assets/ because gitlab-rake runs as `git`,
-# while `assets/` is owned by root
+# Need to let user `git` write to assets/ because gitlab-rake tries to write
+# to it as `git`, while `assets/` is owned by root.
 setfacl -R -m u:git:rwX /opt/gitlab/embedded/service/gitlab-rails/public/assets/
 gitlab-rake assets:precompile RAILS_ENV=production
 chmod -R a+rX /opt/gitlab/embedded/service/gitlab-rails/public/assets/
+
+# Remove git's temporary write access
 setfacl -R -x u:git /opt/gitlab/embedded/service/gitlab-rails/public/assets/
 
 gitlab-ctl restart
