@@ -1,0 +1,25 @@
+From 2e20fea846785bb2ddbd60d91c02e32f0ebcb3ca Mon Sep 17 00:00:00 2001
+From: root <root@gitlab>
+Date: Wed, 19 Aug 2015 11:09:00 +0000
+Subject: [PATCH 5/5] Fix font size for textarea edit boxes
+
+---
+ app/assets/stylesheets/pages/login.scss | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/app/assets/stylesheets/pages/login.scss b/app/assets/stylesheets/pages/login.scss
+index 83b866c..c14b01b 100644
+--- a/app/assets/stylesheets/pages/login.scss
++++ b/app/assets/stylesheets/pages/login.scss
+@@ -62,7 +62,7 @@
+   }
+ 
+   .form-control {
+-    font-size: 14px;
++    font-size: 13px;
+     padding: 10px 8px;
+     width: 100%;
+     height: auto;
+-- 
+1.9.1
+

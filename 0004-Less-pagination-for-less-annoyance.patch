@@ -1,7 +1,7 @@
 From b4fdd1fd25c07d3aba41ae80f711f5de4b38b122 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Sun, 16 Aug 2015 21:12:45 +0000
-Subject: [PATCH 4/4] Less pagination for less annoyance
+Subject: [PATCH 4/5] Less pagination for less annoyance
 
 ---
  app/controllers/application_controller.rb | 2 +-
