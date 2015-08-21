@@ -1,0 +1,24 @@
+From 7015424fc86d4b5cddfd1ec8f7fcfd722eb227c5 Mon Sep 17 00:00:00 2001
+From: root <root@gitlab>
+Date: Fri, 21 Aug 2015 11:20:43 +0000
+Subject: [PATCH 8/8] Make the issue title not-bold, like GitHub
+
+---
+ app/assets/stylesheets/pages/issues.scss | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/app/assets/stylesheets/pages/issues.scss b/app/assets/stylesheets/pages/issues.scss
+index d26fa44..719a4ec 100644
+--- a/app/assets/stylesheets/pages/issues.scss
++++ b/app/assets/stylesheets/pages/issues.scss
+@@ -138,7 +138,6 @@ form.edit-issue {
+ 
+ h2.issue-title {
+   margin-top: 0;
+-  font-weight: bold;
+ }
+ 
+ .issue-form .select2-container {
+-- 
+1.9.1
+

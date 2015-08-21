@@ -1,12 +1,24 @@
-From 2e20fea846785bb2ddbd60d91c02e32f0ebcb3ca Mon Sep 17 00:00:00 2001
+From a5fef7ea5a164c12bc30b8ee74d459654599769a Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Wed, 19 Aug 2015 11:09:00 +0000
-Subject: [PATCH 5/5] Fix font size for textarea edit boxes
+Subject: [PATCH 5/8] Fix font size for textarea edit boxes
 
 ---
- app/assets/stylesheets/pages/login.scss | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ app/assets/stylesheets/generic/forms.scss | 1 +
+ app/assets/stylesheets/pages/login.scss   | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
 
+diff --git a/app/assets/stylesheets/generic/forms.scss b/app/assets/stylesheets/generic/forms.scss
+index 4282832..7b931a5 100644
+--- a/app/assets/stylesheets/generic/forms.scss
++++ b/app/assets/stylesheets/generic/forms.scss
+@@ -1,5 +1,6 @@
+ textarea {
+   resize: vertical;
++  font-size: 13px;
+ }
+ 
+ input[type='search'].search-text-input {
 diff --git a/app/assets/stylesheets/pages/login.scss b/app/assets/stylesheets/pages/login.scss
 index 83b866c..c14b01b 100644
 --- a/app/assets/stylesheets/pages/login.scss

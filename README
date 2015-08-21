@@ -17,3 +17,8 @@ chmod -R a+rX /opt/gitlab/embedded/service/gitlab-rails/public/assets/
 setfacl -R -x u:git /opt/gitlab/embedded/service/gitlab-rails/public/assets/
 
 gitlab-ctl restart
+
+### Alternatively
+
+cd /opt/gitlab/embedded/service/gitlab-rails
+chmod -R a+rX app && gitlab-rake assets:precompile RAILS_ENV=production && chmod -R a+rX public/assets/ && gitlab-ctl restart

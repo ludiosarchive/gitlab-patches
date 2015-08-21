@@ -1,7 +1,7 @@
 From 859900e073e17b8c1fd95d70ca24dfb6880e3afa Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Sun, 16 Aug 2015 16:07:01 +0000
-Subject: [PATCH 1/5] Add no-referrer meta tag to avoid leaking referrers
+Subject: [PATCH 1/8] Add no-referrer meta tag to avoid leaking referrers
 
 ---
  app/views/layouts/_head.html.haml | 1 +

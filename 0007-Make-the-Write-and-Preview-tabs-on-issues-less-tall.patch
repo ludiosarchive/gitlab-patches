@@ -1,0 +1,38 @@
+From f2c16b12d6a11e89ab07d3f96fa065c398dd0f2a Mon Sep 17 00:00:00 2001
+From: root <root@gitlab>
+Date: Fri, 21 Aug 2015 11:15:00 +0000
+Subject: [PATCH 7/8] Make the 'Write' and 'Preview' tabs on issues less tall
+
+---
+ app/assets/stylesheets/generic/markdown_area.scss | 1 +
+ app/assets/stylesheets/generic/zen.scss           | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/app/assets/stylesheets/generic/markdown_area.scss b/app/assets/stylesheets/generic/markdown_area.scss
+index f94677d..f1d88a7 100644
+--- a/app/assets/stylesheets/generic/markdown_area.scss
++++ b/app/assets/stylesheets/generic/markdown_area.scss
+@@ -88,6 +88,7 @@
+ 
+     li a,
+     li.active a {
++      padding: 3px 15px;
+       border: 1px solid #DDD;
+     }
+   }
+diff --git a/app/assets/stylesheets/generic/zen.scss b/app/assets/stylesheets/generic/zen.scss
+index 7e86a0f..cc0af27 100644
+--- a/app/assets/stylesheets/generic/zen.scss
++++ b/app/assets/stylesheets/generic/zen.scss
+@@ -8,7 +8,7 @@
+     position: absolute;
+     top: 0px;
+     right: 4px;
+-    line-height: 40px;
++    line-height: 27px;
+   }
+ 
+   .zen-leave-link {
+-- 
+1.9.1
+
