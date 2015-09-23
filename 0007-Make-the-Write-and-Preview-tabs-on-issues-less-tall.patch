@@ -1,7 +1,7 @@
 From a609b0d44d4b5b436f6c74e60e1bea79f5b56350 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Fri, 21 Aug 2015 11:15:00 +0000
-Subject: [PATCH 7/9] Make the 'Write' and 'Preview' tabs on issues less tall
+Subject: [PATCH 07/10] Make the 'Write' and 'Preview' tabs on issues less tall
 
 ---
  app/assets/stylesheets/generic/markdown_area.scss | 1 +
