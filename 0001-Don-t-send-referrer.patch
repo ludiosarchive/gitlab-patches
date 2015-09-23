@@ -1,24 +1,25 @@
-From 859900e073e17b8c1fd95d70ca24dfb6880e3afa Mon Sep 17 00:00:00 2001
+From d3d9ac2ab5f65e1e9f26d89f4c2ce0cb284e06f2 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
-Date: Sun, 16 Aug 2015 16:07:01 +0000
-Subject: [PATCH 1/8] Add no-referrer meta tag to avoid leaking referrers
+Date: Wed, 23 Sep 2015 21:31:44 +0000
+Subject: [PATCH 1/9] Don't send referrer
 
 ---
- app/views/layouts/_head.html.haml | 1 +
- 1 file changed, 1 insertion(+)
+ app/views/layouts/_head.html.haml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/app/views/layouts/_head.html.haml b/app/views/layouts/_head.html.haml
-index 54cddc3..b2b99c8 100644
+index c3b137e..fac544a 100644
 --- a/app/views/layouts/_head.html.haml
 +++ b/app/views/layouts/_head.html.haml
-@@ -2,6 +2,7 @@
- %head
+@@ -3,7 +3,7 @@
    %meta{charset: "utf-8"}
    %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=edge'}
-+  %meta{'name' => 'referrer', content: 'no-referrer'}
    %meta{content: "GitLab Community Edition", name: "description"}
+-  %meta{name: 'referrer', content: 'origin'}
++  %meta{name: 'referrer', content: 'no-referrer'}
  
    %title= page_title
+ 
 -- 
 1.9.1
 

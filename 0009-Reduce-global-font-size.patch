@@ -1,0 +1,27 @@
+From 4c8f42890611bd61e2e426669d5971bc903247f4 Mon Sep 17 00:00:00 2001
+From: root <root@gitlab>
+Date: Wed, 23 Sep 2015 22:03:25 +0000
+Subject: [PATCH 9/9] Reduce global font size
+
+---
+ app/assets/stylesheets/base/variables.scss | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/app/assets/stylesheets/base/variables.scss b/app/assets/stylesheets/base/variables.scss
+index aa76f6d..857191b 100644
+--- a/app/assets/stylesheets/base/variables.scss
++++ b/app/assets/stylesheets/base/variables.scss
+@@ -5,8 +5,8 @@ $gl-link-color: #333c48;
+ $md-text-color: #444;
+ $md-link-color: #3084bb;
+ $nprogress-color: #c0392b;
+-$gl-font-size: 15px;
+-$list-font-size: 15px;
++$gl-font-size: 14px;
++$list-font-size: 14px;
+ $sidebar_collapsed_width: 62px;
+ $sidebar_width: 230px;
+ $avatar_radius: 50%;
+-- 
+1.9.1
+

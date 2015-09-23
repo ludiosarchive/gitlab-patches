@@ -1,7 +1,7 @@
-From f2c16b12d6a11e89ab07d3f96fa065c398dd0f2a Mon Sep 17 00:00:00 2001
+From a609b0d44d4b5b436f6c74e60e1bea79f5b56350 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Fri, 21 Aug 2015 11:15:00 +0000
-Subject: [PATCH 7/8] Make the 'Write' and 'Preview' tabs on issues less tall
+Subject: [PATCH 7/9] Make the 'Write' and 'Preview' tabs on issues less tall
 
 ---
  app/assets/stylesheets/generic/markdown_area.scss | 1 +
@@ -9,10 +9,10 @@ Subject: [PATCH 7/8] Make the 'Write' and 'Preview' tabs on issues less tall
  2 files changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/app/assets/stylesheets/generic/markdown_area.scss b/app/assets/stylesheets/generic/markdown_area.scss
-index f94677d..f1d88a7 100644
+index ed0333d..b441da9 100644
 --- a/app/assets/stylesheets/generic/markdown_area.scss
 +++ b/app/assets/stylesheets/generic/markdown_area.scss
-@@ -88,6 +88,7 @@
+@@ -100,6 +100,7 @@
  
      li a,
      li.active a {
@@ -21,7 +21,7 @@ index f94677d..f1d88a7 100644
      }
    }
 diff --git a/app/assets/stylesheets/generic/zen.scss b/app/assets/stylesheets/generic/zen.scss
-index 7e86a0f..cc0af27 100644
+index 32e2c02..5142076 100644
 --- a/app/assets/stylesheets/generic/zen.scss
 +++ b/app/assets/stylesheets/generic/zen.scss
 @@ -8,7 +8,7 @@

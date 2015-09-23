@@ -1,7 +1,7 @@
-From 0a90a1c283afe491dde9b7af17bfef773a6feb24 Mon Sep 17 00:00:00 2001
+From 9ec49bf27f21e821c623c200dc4eb468688533fe Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Fri, 21 Aug 2015 10:52:34 +0000
-Subject: [PATCH 6/8] Make buttons on issues look more like GitHub's
+Subject: [PATCH 6/9] Make buttons on issues look more like GitHub's
 
 ---
  app/assets/javascripts/notes.js.coffee          | 4 ++--
@@ -11,10 +11,10 @@ Subject: [PATCH 6/8] Make buttons on issues look more like GitHub's
  4 files changed, 8 insertions(+), 5 deletions(-)
 
 diff --git a/app/assets/javascripts/notes.js.coffee b/app/assets/javascripts/notes.js.coffee
-index 1c05a2b..7c3fc0b 100644
+index ce638c2..61bc3c3 100644
 --- a/app/assets/javascripts/notes.js.coffee
 +++ b/app/assets/javascripts/notes.js.coffee
-@@ -519,8 +519,8 @@ class @Notes
+@@ -520,8 +520,8 @@ class @Notes
      form = textarea.parents('form')
  
      if textarea.val().trim().length > 0
@@ -26,10 +26,10 @@ index 1c05a2b..7c3fc0b 100644
        form.find('.js-note-target-reopen').text('Reopen')
        form.find('.js-note-target-close').text('Close')
 diff --git a/app/assets/stylesheets/pages/note_form.scss b/app/assets/stylesheets/pages/note_form.scss
-index 203f937..5cd20ff 100644
+index fdc2c33..1526106 100644
 --- a/app/assets/stylesheets/pages/note_form.scss
 +++ b/app/assets/stylesheets/pages/note_form.scss
-@@ -78,6 +78,9 @@
+@@ -82,6 +82,9 @@
  }
  
  .note-form-actions {
@@ -40,7 +40,7 @@ index 203f937..5cd20ff 100644
  
    .note-form-option {
 diff --git a/app/views/projects/issues/_discussion.html.haml b/app/views/projects/issues/_discussion.html.haml
-index f61ae95..6ee8825 100644
+index d4a98ec..7b1cbff 100644
 --- a/app/views/projects/issues/_discussion.html.haml
 +++ b/app/views/projects/issues/_discussion.html.haml
 @@ -1,9 +1,9 @@
@@ -56,7 +56,7 @@ index f61ae95..6ee8825 100644
  = render 'shared/show_aside'
  
 diff --git a/app/views/projects/notes/_form.html.haml b/app/views/projects/notes/_form.html.haml
-index 3be8f44..74af893 100644
+index d99445d..fd2fc65 100644
 --- a/app/views/projects/notes/_form.html.haml
 +++ b/app/views/projects/notes/_form.html.haml
 @@ -14,6 +14,6 @@

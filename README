@@ -20,5 +20,8 @@ gitlab-ctl restart
 
 ### Alternatively
 
-cd /opt/gitlab/embedded/service/gitlab-rails
-chmod -R a+rX app && gitlab-rake assets:precompile RAILS_ENV=production && chmod -R a+rX public/assets/ && gitlab-ctl restart
+cd /opt/gitlab/embedded/service/gitlab-rails && \
+setfacl -R -m u:git:rwX /opt/gitlab/embedded/service/gitlab-rails/public/assets/ && \
+chmod -R a+rX app config && gitlab-rake assets:precompile RAILS_ENV=production && \
+chmod -R a+rX public/assets/ && \
+gitlab-ctl restart
