@@ -1,7 +1,7 @@
-From bab75f28209fc121b5ec35039feaa76e503039dd Mon Sep 17 00:00:00 2001
+From b3d397042f73dc30435d0578c472c1a8d8ad628f Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Sun, 16 Aug 2015 21:12:45 +0000
-Subject: [PATCH 04/10] Less pagination for less annoyance
+Subject: [PATCH 04/11] Less pagination for less annoyance
 
 ---
  app/controllers/application_controller.rb | 2 +-
@@ -9,7 +9,7 @@ Subject: [PATCH 04/10] Less pagination for less annoyance
  2 files changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/app/controllers/application_controller.rb b/app/controllers/application_controller.rb
-index 9b6472a..eec67c8 100644
+index 865deb7..bd55a72 100644
 --- a/app/controllers/application_controller.rb
 +++ b/app/controllers/application_controller.rb
 @@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base

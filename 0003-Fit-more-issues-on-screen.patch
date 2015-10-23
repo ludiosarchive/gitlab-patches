@@ -1,14 +1,14 @@
-From 24a3f8714e2dc165dbd8f259ff334937f516555b Mon Sep 17 00:00:00 2001
+From 6a11cec0e13774810017a95e92b5d847ed9fdfab Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Wed, 23 Sep 2015 21:35:39 +0000
-Subject: [PATCH 03/10] Fit more issues on screen
+Subject: [PATCH 03/11] Fit more issues on screen
 
 ---
  app/assets/stylesheets/pages/issues.scss | 3 +--
  1 file changed, 1 insertion(+), 2 deletions(-)
 
 diff --git a/app/assets/stylesheets/pages/issues.scss b/app/assets/stylesheets/pages/issues.scss
-index 4bf58cb..bcf5588 100644
+index 41c069f..eb96ec2 100644
 --- a/app/assets/stylesheets/pages/issues.scss
 +++ b/app/assets/stylesheets/pages/issues.scss
 @@ -1,10 +1,9 @@

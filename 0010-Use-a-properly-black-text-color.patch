@@ -1,31 +1,18 @@
-From e5dc0248adbea72cc606e945014f58727af98ab0 Mon Sep 17 00:00:00 2001
+From 2d742188505ed96058e4ec29accb75125c2cb3e0 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
-Date: Wed, 23 Sep 2015 22:07:35 +0000
-Subject: [PATCH 10/10] Use a properly black text color
+Date: Fri, 23 Oct 2015 15:42:38 +0000
+Subject: [PATCH 10/11] Use a properly black text color
 
 ---
- app/assets/stylesheets/base/variables.scss     | 2 +-
- app/assets/stylesheets/generic/typography.scss | 2 +-
+ app/assets/stylesheets/framework/typography.scss | 2 +-
+ app/assets/stylesheets/framework/variables.scss  | 2 +-
  2 files changed, 2 insertions(+), 2 deletions(-)
 
-diff --git a/app/assets/stylesheets/base/variables.scss b/app/assets/stylesheets/base/variables.scss
-index 857191b..ad1f635 100644
---- a/app/assets/stylesheets/base/variables.scss
-+++ b/app/assets/stylesheets/base/variables.scss
-@@ -2,7 +2,7 @@ $hover: #FFFAF1;
- $gl-text-color: #54565b;
- $gl-header-color: #4c4e54;
- $gl-link-color: #333c48;
--$md-text-color: #444;
-+$md-text-color: #000;
- $md-link-color: #3084bb;
- $nprogress-color: #c0392b;
- $gl-font-size: 14px;
-diff --git a/app/assets/stylesheets/generic/typography.scss b/app/assets/stylesheets/generic/typography.scss
-index d5f0d86..2857726 100644
---- a/app/assets/stylesheets/generic/typography.scss
-+++ b/app/assets/stylesheets/generic/typography.scss
-@@ -19,7 +19,7 @@ pre {
+diff --git a/app/assets/stylesheets/framework/typography.scss b/app/assets/stylesheets/framework/typography.scss
+index e6558a2..eba74a6 100644
+--- a/app/assets/stylesheets/framework/typography.scss
++++ b/app/assets/stylesheets/framework/typography.scss
+@@ -202,7 +202,7 @@ pre {
    font-family: $monospace_font;
  
    &.dark {
@@ -34,6 +21,19 @@ index d5f0d86..2857726 100644
      color: $background-color;
    }
  
+diff --git a/app/assets/stylesheets/framework/variables.scss b/app/assets/stylesheets/framework/variables.scss
+index 3e11805..61d516a 100644
+--- a/app/assets/stylesheets/framework/variables.scss
++++ b/app/assets/stylesheets/framework/variables.scss
+@@ -5,7 +5,7 @@ $gl-text-red: #D12F19;
+ $gl-text-orange: #D90;
+ $gl-header-color: #4c4e54;
+ $gl-link-color: #333c48;
+-$md-text-color: #444;
++$md-text-color: #000;
+ $md-link-color: #3084bb;
+ $nprogress-color: #c0392b;
+ $gl-font-size: 14px;
 -- 
 1.9.1
 

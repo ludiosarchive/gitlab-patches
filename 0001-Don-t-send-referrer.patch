@@ -1,14 +1,14 @@
-From d3d9ac2ab5f65e1e9f26d89f4c2ce0cb284e06f2 Mon Sep 17 00:00:00 2001
+From 85f36459b087d1c323b8cf3bff583ac4289ee8f7 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Wed, 23 Sep 2015 21:31:44 +0000
-Subject: [PATCH 01/10] Don't send referrer
+Subject: [PATCH 01/11] Don't send referrer
 
 ---
  app/views/layouts/_head.html.haml | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/app/views/layouts/_head.html.haml b/app/views/layouts/_head.html.haml
-index c3b137e..fac544a 100644
+index 74174a7..fac544a 100644
 --- a/app/views/layouts/_head.html.haml
 +++ b/app/views/layouts/_head.html.haml
 @@ -3,7 +3,7 @@

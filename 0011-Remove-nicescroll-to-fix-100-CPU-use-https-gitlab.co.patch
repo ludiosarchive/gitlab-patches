@@ -1,0 +1,34 @@
+From 1fae3ba8e0b8a28ad46c5855d5f5ce1a540dee1e Mon Sep 17 00:00:00 2001
+From: root <root@gitlab>
+Date: Fri, 23 Oct 2015 15:45:06 +0000
+Subject: [PATCH 11/11] Remove nicescroll to fix 100% CPU use:
+ https://gitlab.com/gitlab-org/gitlab-ce/issues/342#note_2473360
+
+---
+ app/assets/javascripts/application.js.coffee | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/app/assets/javascripts/application.js.coffee b/app/assets/javascripts/application.js.coffee
+index 945ffb6..00bff2b 100644
+--- a/app/assets/javascripts/application.js.coffee
++++ b/app/assets/javascripts/application.js.coffee
+@@ -40,7 +40,6 @@
+ #= require shortcuts_issuable
+ #= require shortcuts_network
+ #= require cal-heatmap
+-#= require jquery.nicescroll.min
+ #= require_tree .
+ 
+ window.slugify = (text) ->
+@@ -107,8 +106,6 @@ window.onload = ->
+     setTimeout shiftWindow, 100
+ 
+ $ ->
+-  $(".nicescroll").niceScroll(cursoropacitymax: '0.4', cursorcolor: '#FFF', cursorborder: "1px solid #FFF")
+-
+   # Click a .js-select-on-focus field, select the contents
+   $(".js-select-on-focus").on "focusin", ->
+     # Prevent a mouseup event from deselecting the input
+-- 
+1.9.1
+

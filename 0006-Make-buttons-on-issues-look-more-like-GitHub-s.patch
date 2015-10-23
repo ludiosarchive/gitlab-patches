@@ -1,7 +1,7 @@
-From 9ec49bf27f21e821c623c200dc4eb468688533fe Mon Sep 17 00:00:00 2001
+From b5bbb5dfdfa07bd068579e87b6c1a9b0e7c78273 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Fri, 21 Aug 2015 10:52:34 +0000
-Subject: [PATCH 06/10] Make buttons on issues look more like GitHub's
+Subject: [PATCH 06/11] Make buttons on issues look more like GitHub's
 
 ---
  app/assets/javascripts/notes.js.coffee          | 4 ++--
@@ -11,10 +11,10 @@ Subject: [PATCH 06/10] Make buttons on issues look more like GitHub's
  4 files changed, 8 insertions(+), 5 deletions(-)
 
 diff --git a/app/assets/javascripts/notes.js.coffee b/app/assets/javascripts/notes.js.coffee
-index ce638c2..61bc3c3 100644
+index ea75c65..6660364 100644
 --- a/app/assets/javascripts/notes.js.coffee
 +++ b/app/assets/javascripts/notes.js.coffee
-@@ -520,8 +520,8 @@ class @Notes
+@@ -515,8 +515,8 @@ class @Notes
      form = textarea.parents('form')
  
      if textarea.val().trim().length > 0
@@ -26,10 +26,10 @@ index ce638c2..61bc3c3 100644
        form.find('.js-note-target-reopen').text('Reopen')
        form.find('.js-note-target-close').text('Close')
 diff --git a/app/assets/stylesheets/pages/note_form.scss b/app/assets/stylesheets/pages/note_form.scss
-index fdc2c33..1526106 100644
+index 4392f08..d24a42f 100644
 --- a/app/assets/stylesheets/pages/note_form.scss
 +++ b/app/assets/stylesheets/pages/note_form.scss
-@@ -82,6 +82,9 @@
+@@ -81,6 +81,9 @@
  }
  
  .note-form-actions {
@@ -56,16 +56,16 @@ index d4a98ec..7b1cbff 100644
  = render 'shared/show_aside'
  
 diff --git a/app/views/projects/notes/_form.html.haml b/app/views/projects/notes/_form.html.haml
-index d99445d..fd2fc65 100644
+index 13dfa0a..a6537c2 100644
 --- a/app/views/projects/notes/_form.html.haml
 +++ b/app/views/projects/notes/_form.html.haml
 @@ -14,6 +14,6 @@
  
    .note-form-actions
      .buttons.clearfix
--      = f.submit 'Add Comment', class: "btn comment-btn btn-grouped js-comment-button"
+-      = f.submit 'Add Comment', class: "btn btn-green comment-btn btn-grouped js-comment-button"
        = yield(:note_actions)
-+      = f.submit 'Comment', class: "btn comment-btn btn-grouped js-comment-button"
++      = f.submit 'Comment', class: "btn btn-green comment-btn btn-grouped js-comment-button"
        %a.btn.grouped.js-close-discussion-note-form Cancel
 -- 
 1.9.1

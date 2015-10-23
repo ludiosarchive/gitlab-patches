@@ -1,14 +1,14 @@
-From 9295f99443f0ed687cb247a69f960ee40fb3a25a Mon Sep 17 00:00:00 2001
+From 09beb3e0436e83f942521a8a180f23bad0a024f3 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Wed, 23 Sep 2015 21:57:22 +0000
-Subject: [PATCH 08/10] Make issue title on issue page look more like GitHub's
+Subject: [PATCH 08/11] Make issue title on issue page look more like GitHub's
 
 ---
  app/assets/stylesheets/pages/issues.scss | 5 +++++
  1 file changed, 5 insertions(+)
 
 diff --git a/app/assets/stylesheets/pages/issues.scss b/app/assets/stylesheets/pages/issues.scss
-index bcf5588..78e01c2 100644
+index eb96ec2..437b319 100644
 --- a/app/assets/stylesheets/pages/issues.scss
 +++ b/app/assets/stylesheets/pages/issues.scss
 @@ -1,3 +1,8 @@
