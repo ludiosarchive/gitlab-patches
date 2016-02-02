@@ -1,0 +1,33 @@
+From 0e8ec86b496872980daec26421f39947ed56a65a Mon Sep 17 00:00:00 2001
+From: root <root@gitlab>
+Date: Tue, 2 Feb 2016 14:20:29 +0000
+Subject: [PATCH 01/10] Never send referrer
+
+---
+ app/views/layouts/_head.html.haml | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/app/views/layouts/_head.html.haml b/app/views/layouts/_head.html.haml
+index 38ca4f9..a6045d9 100644
+--- a/app/views/layouts/_head.html.haml
++++ b/app/views/layouts/_head.html.haml
+@@ -4,6 +4,7 @@
+ %head{prefix: "og: http://ogp.me/ns#"}
+   %meta{charset: "utf-8"}
+   %meta{'http-equiv' => 'X-UA-Compatible', content: 'IE=edge'}
++  %meta{name: 'referrer', content: 'no-referrer'}
+ 
+   -# Open Graph - http://ogp.me/
+   %meta{property: 'og:type',        content: "object"}
+@@ -34,8 +35,6 @@
+ 
+   = include_gon
+ 
+-  - unless browser.safari?
+-    %meta{name: 'referrer', content: 'origin-when-cross-origin'}
+   %meta{name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1'}
+   %meta{name: 'theme-color', content: '#474D57'}
+ 
+-- 
+1.9.1
+

@@ -1,0 +1,38 @@
+From db251c001721d230c743d09470cba405fa3cf527 Mon Sep 17 00:00:00 2001
+From: root <root@gitlab>
+Date: Tue, 2 Feb 2016 14:29:10 +0000
+Subject: [PATCH 08/10] Use a properly black text color
+
+---
+ app/assets/stylesheets/framework/variables.scss | 2 +-
+ app/assets/stylesheets/pages/issues.scss        | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/app/assets/stylesheets/framework/variables.scss b/app/assets/stylesheets/framework/variables.scss
+index 9e24cec..3a17ec0 100644
+--- a/app/assets/stylesheets/framework/variables.scss
++++ b/app/assets/stylesheets/framework/variables.scss
+@@ -5,7 +5,7 @@ $gl-text-red: #D12F19;
+ $gl-text-orange: #D90;
+ $gl-header-color: #323232;
+ $gl-link-color: #333c48;
+-$md-text-color: #444;
++$md-text-color: #000;
+ $md-link-color: #3084bb;
+ $nprogress-color: #c0392b;
+ $gl-font-size: 14px;
+diff --git a/app/assets/stylesheets/pages/issues.scss b/app/assets/stylesheets/pages/issues.scss
+index c1c2081..261208f 100644
+--- a/app/assets/stylesheets/pages/issues.scss
++++ b/app/assets/stylesheets/pages/issues.scss
+@@ -1,6 +1,6 @@
+ h2.issue-title {
+   font-size: 30px;
+-  color: #333;
++  color: #000;
+ }
+ 
+ .issues-list {
+-- 
+1.9.1
+

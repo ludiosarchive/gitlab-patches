@@ -1,0 +1,53 @@
+From ef59395166e4a37d8bac489c19c1038006d9b2cc Mon Sep 17 00:00:00 2001
+From: root <root@gitlab>
+Date: Tue, 2 Feb 2016 14:39:15 +0000
+Subject: [PATCH 10/10] Darken the page background and the issues table
+
+---
+ app/assets/stylesheets/framework/layout.scss    | 2 ++
+ app/assets/stylesheets/framework/sidebar.scss   | 2 +-
+ app/assets/stylesheets/framework/variables.scss | 2 +-
+ 3 files changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/app/assets/stylesheets/framework/layout.scss b/app/assets/stylesheets/framework/layout.scss
+index e901c78..80540f9 100644
+--- a/app/assets/stylesheets/framework/layout.scss
++++ b/app/assets/stylesheets/framework/layout.scss
+@@ -5,6 +5,8 @@ html {
+ }
+ 
+ body {
++  background-color: #888;
++
+   &.navless {
+     background-color: white !important;
+   }
+diff --git a/app/assets/stylesheets/framework/sidebar.scss b/app/assets/stylesheets/framework/sidebar.scss
+index 540d0b0..4ebc199 100644
+--- a/app/assets/stylesheets/framework/sidebar.scss
++++ b/app/assets/stylesheets/framework/sidebar.scss
+@@ -23,7 +23,7 @@
+   width: 100%;
+ 
+   .container-fluid {
+-    background: #FFF;
++    background: #f7f7f7;
+     padding: 0 $gl-padding;
+ 
+     &.container-blank {
+diff --git a/app/assets/stylesheets/framework/variables.scss b/app/assets/stylesheets/framework/variables.scss
+index 3a17ec0..eeb61c8 100644
+--- a/app/assets/stylesheets/framework/variables.scss
++++ b/app/assets/stylesheets/framework/variables.scss
+@@ -16,7 +16,7 @@ $avatar_radius: 50%;
+ $code_font_size: 13px;
+ $code_line_height: 1.5;
+ $border-color: #efeff1;
+-$table-border-color: #eef0f2;
++$table-border-color: #ddd;
+ $background-color: #faf9f9;
+ $header-height: 58px;
+ $fixed-layout-width: 1280px;
+-- 
+1.9.1
+

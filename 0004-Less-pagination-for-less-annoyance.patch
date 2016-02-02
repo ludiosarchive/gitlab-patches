@@ -1,7 +1,7 @@
-From b3d397042f73dc30435d0578c472c1a8d8ad628f Mon Sep 17 00:00:00 2001
+From 0d18dcb9c6e420eb3ae73bbad3846e7ea28844d9 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Sun, 16 Aug 2015 21:12:45 +0000
-Subject: [PATCH 04/11] Less pagination for less annoyance
+Subject: [PATCH 04/10] Less pagination for less annoyance
 
 ---
  app/controllers/application_controller.rb | 2 +-
@@ -9,7 +9,7 @@ Subject: [PATCH 04/11] Less pagination for less annoyance
  2 files changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/app/controllers/application_controller.rb b/app/controllers/application_controller.rb
-index 865deb7..bd55a72 100644
+index 2d735b9..cc73eec 100644
 --- a/app/controllers/application_controller.rb
 +++ b/app/controllers/application_controller.rb
 @@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
@@ -17,20 +17,20 @@ index 865deb7..bd55a72 100644
    include PageLayoutHelper
  
 -  PER_PAGE = 20
-+  PER_PAGE = 200
++  PER_PAGE = 300
  
    before_action :authenticate_user_from_token!
    before_action :authenticate_user!
 diff --git a/config/initializers/kaminari_config.rb b/config/initializers/kaminari_config.rb
-index 3cbe9a0..d2e064e 100644
+index 3cbe9a0..46bb4fb 100644
 --- a/config/initializers/kaminari_config.rb
 +++ b/config/initializers/kaminari_config.rb
 @@ -1,6 +1,6 @@
  Kaminari.configure do |config|
 -  config.default_per_page = 20
 -  config.max_per_page = 100
-+  config.default_per_page = 200
-+  config.max_per_page = 200
++  config.default_per_page = 300
++  config.max_per_page = 300
    # config.window = 4
    # config.outer_window = 0
    # config.left = 0

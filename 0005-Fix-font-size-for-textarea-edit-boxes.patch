@@ -1,7 +1,7 @@
-From b89b087456d7e84cd769d748d83c0e0bbb06ad33 Mon Sep 17 00:00:00 2001
+From eeee4129071094643e8b2f627968b467d96f8395 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Wed, 19 Aug 2015 11:09:00 +0000
-Subject: [PATCH 05/11] Fix font size for textarea edit boxes
+Subject: [PATCH 05/10] Fix font size for textarea edit boxes
 
 ---
  app/assets/stylesheets/framework/forms.scss | 1 +
@@ -9,7 +9,7 @@ Subject: [PATCH 05/11] Fix font size for textarea edit boxes
  2 files changed, 2 insertions(+), 1 deletion(-)
 
 diff --git a/app/assets/stylesheets/framework/forms.scss b/app/assets/stylesheets/framework/forms.scss
-index 0edfe24..257bd7e 100644
+index 4dab806..7902d88 100644
 --- a/app/assets/stylesheets/framework/forms.scss
 +++ b/app/assets/stylesheets/framework/forms.scss
 @@ -1,5 +1,6 @@
@@ -20,10 +20,10 @@ index 0edfe24..257bd7e 100644
  
  input[type='search'].search-text-input {
 diff --git a/app/assets/stylesheets/pages/login.scss b/app/assets/stylesheets/pages/login.scss
-index 83b866c..c14b01b 100644
+index f9c6f1b..838ae13 100644
 --- a/app/assets/stylesheets/pages/login.scss
 +++ b/app/assets/stylesheets/pages/login.scss
-@@ -62,7 +62,7 @@
+@@ -63,7 +63,7 @@
    }
  
    .form-control {
