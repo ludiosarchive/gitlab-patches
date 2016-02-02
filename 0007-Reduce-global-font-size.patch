@@ -1,7 +1,7 @@
 From 8a4d31ccde0c418fdd19ae26ee3c027e85ade8b9 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Wed, 23 Sep 2015 22:03:25 +0000
-Subject: [PATCH 07/10] Reduce global font size
+Subject: [PATCH 07/11] Reduce global font size
 
 ---
  app/assets/stylesheets/framework/variables.scss | 4 ++--
