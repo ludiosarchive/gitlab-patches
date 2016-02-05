@@ -1,7 +1,7 @@
 From eeee4129071094643e8b2f627968b467d96f8395 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Wed, 19 Aug 2015 11:09:00 +0000
-Subject: [PATCH 05/11] Fix font size for textarea edit boxes
+Subject: [PATCH 05/12] Fix font size for textarea edit boxes
 
 ---
  app/assets/stylesheets/framework/forms.scss | 1 +

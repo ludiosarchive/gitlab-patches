@@ -1,7 +1,7 @@
 From ffaa49d21f34a1d44d5c16f5c80f44cf20cc147f Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Tue, 2 Feb 2016 14:22:06 +0000
-Subject: [PATCH 03/11] Fit more issues on screen
+Subject: [PATCH 03/12] Fit more issues on screen
 
 ---
  app/assets/stylesheets/pages/issues.scss | 5 ++---

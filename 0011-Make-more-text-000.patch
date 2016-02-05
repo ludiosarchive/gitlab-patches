@@ -1,7 +1,7 @@
 From f43cf16d72ae28413c7d95e1cae1f07c07758b39 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Tue, 2 Feb 2016 15:01:14 +0000
-Subject: [PATCH 11/11] Make more text #000
+Subject: [PATCH 11/12] Make more text #000
 
 ---
  app/assets/stylesheets/framework/typography.scss | 2 --

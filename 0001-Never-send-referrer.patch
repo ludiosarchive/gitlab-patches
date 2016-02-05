@@ -1,7 +1,7 @@
 From 0e8ec86b496872980daec26421f39947ed56a65a Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Tue, 2 Feb 2016 14:20:29 +0000
-Subject: [PATCH 01/11] Never send referrer
+Subject: [PATCH 01/12] Never send referrer
 
 ---
  app/views/layouts/_head.html.haml | 3 +--
