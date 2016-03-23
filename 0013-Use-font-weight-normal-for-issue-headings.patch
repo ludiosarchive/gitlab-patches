@@ -1,0 +1,24 @@
+From 151ea3a6994404b6b809d0c3289b1d19b2540db4 Mon Sep 17 00:00:00 2001
+From: root <root@gitlab>
+Date: Wed, 23 Mar 2016 08:11:16 +0000
+Subject: [PATCH 13/13] Use font-weight: normal for issue headings
+
+---
+ app/assets/stylesheets/pages/detail_page.scss | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/app/assets/stylesheets/pages/detail_page.scss b/app/assets/stylesheets/pages/detail_page.scss
+index 467f1fd..9022fb3 100644
+--- a/app/assets/stylesheets/pages/detail_page.scss
++++ b/app/assets/stylesheets/pages/detail_page.scss
+@@ -25,6 +25,7 @@
+     margin: 0;
+     font-size: 23px;
+     color: #313236;
++    font-weight: normal;
+   }
+ 
+   .description {
+-- 
+1.9.1
+

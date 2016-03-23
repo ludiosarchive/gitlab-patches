@@ -1,7 +1,7 @@
 From 9e990c8bc9c10b308cdb97abba6ddd8127889089 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Wed, 23 Mar 2016 07:52:24 +0000
-Subject: [PATCH 06/12] Make issue title on issue page look more like GitHub's
+Subject: [PATCH 06/13] Make issue title on issue page look more like GitHub's
 
 ---
  app/assets/stylesheets/pages/issues.scss | 5 +++++

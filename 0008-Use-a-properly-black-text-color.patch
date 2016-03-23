@@ -1,7 +1,7 @@
 From dd33de66d3a929b044001acfcecccde047928eef Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Wed, 23 Mar 2016 07:54:38 +0000
-Subject: [PATCH 08/12] Use a properly black text color
+Subject: [PATCH 08/13] Use a properly black text color
 
 ---
  app/assets/stylesheets/framework/variables.scss | 6 +++---

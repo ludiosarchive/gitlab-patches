@@ -1,7 +1,7 @@
 From 46d5b1e20d04fa790066d303cc2597b08393ddff Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Wed, 23 Mar 2016 07:55:14 +0000
-Subject: [PATCH 09/12] Remove nicescroll to fix 100% CPU use:
+Subject: [PATCH 09/13] Remove nicescroll to fix 100% CPU use:
  https://gitlab.com/gitlab-org/gitlab-ce/issues/342#note_2473360
 
 ---

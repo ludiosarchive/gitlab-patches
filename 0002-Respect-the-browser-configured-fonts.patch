@@ -1,7 +1,7 @@
 From 6a73374e0c850a7751f1bcfbc600def4fd2d3aa3 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Wed, 23 Mar 2016 07:47:33 +0000
-Subject: [PATCH 02/12] Respect the browser-configured fonts
+Subject: [PATCH 02/13] Respect the browser-configured fonts
 
 ---
  app/assets/stylesheets/framework/variables.scss | 4 ++--

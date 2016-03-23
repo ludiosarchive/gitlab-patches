@@ -1,7 +1,7 @@
 From aa5865a1d14fa481ac4556931fb138c445f8f9dd Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Wed, 23 Mar 2016 07:59:48 +0000
-Subject: [PATCH 12/12] Make even more text black
+Subject: [PATCH 12/13] Make even more text black
 
 ---
  app/assets/stylesheets/framework/typography.scss | 2 --

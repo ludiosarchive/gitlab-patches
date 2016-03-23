@@ -1,7 +1,7 @@
 From 4826a0687b6a4eb9cc704d142f52ca01f6a0d9e7 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Wed, 23 Mar 2016 07:56:35 +0000
-Subject: [PATCH 10/12] Darken the page background and the issues table
+Subject: [PATCH 10/13] Darken the page background and the issues table
 
 ---
  app/assets/stylesheets/framework/layout.scss    | 2 ++
