@@ -1,6 +1,6 @@
-From 7ffeb9ccbb458fe2b502b7cedf36f2086bef9a86 Mon Sep 17 00:00:00 2001
+From 46d5b1e20d04fa790066d303cc2597b08393ddff Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
-Date: Tue, 2 Feb 2016 14:30:38 +0000
+Date: Wed, 23 Mar 2016 07:55:14 +0000
 Subject: [PATCH 09/12] Remove nicescroll to fix 100% CPU use:
  https://gitlab.com/gitlab-org/gitlab-ce/issues/342#note_2473360
 
@@ -9,21 +9,21 @@ Subject: [PATCH 09/12] Remove nicescroll to fix 100% CPU use:
  1 file changed, 3 deletions(-)
 
 diff --git a/app/assets/javascripts/application.js.coffee b/app/assets/javascripts/application.js.coffee
-index c095e5a..d6b4035 100644
+index 7f98332..1ba71b1 100644
 --- a/app/assets/javascripts/application.js.coffee
 +++ b/app/assets/javascripts/application.js.coffee
-@@ -38,7 +38,6 @@
+@@ -40,7 +40,6 @@
  #= require shortcuts_dashboard_navigation
  #= require shortcuts_issuable
  #= require shortcuts_network
--#= require jquery.nicescroll.min
+-#= require jquery.nicescroll
  #= require_tree .
- #= require fuzzaldrin-plus.min
+ #= require fuzzaldrin-plus
  
-@@ -106,8 +105,6 @@ window.onload = ->
-     setTimeout shiftWindow, 100
- 
+@@ -110,8 +109,6 @@ window.onload = ->
  $ ->
+   bootstrapBreakpoint = bp.getBreakpointSize()
+ 
 -  $(".nicescroll").niceScroll(cursoropacitymax: '0.4', cursorcolor: '#FFF', cursorborder: "1px solid #FFF")
 -
    # Click a .js-select-on-focus field, select the contents

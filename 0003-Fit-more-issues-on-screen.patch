@@ -1,6 +1,6 @@
-From ffaa49d21f34a1d44d5c16f5c80f44cf20cc147f Mon Sep 17 00:00:00 2001
+From 5d7512b3904367693a562e7ccea64784b4f7d482 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
-Date: Tue, 2 Feb 2016 14:22:06 +0000
+Date: Wed, 23 Mar 2016 07:50:45 +0000
 Subject: [PATCH 03/12] Fit more issues on screen
 
 ---
@@ -8,7 +8,7 @@ Subject: [PATCH 03/12] Fit more issues on screen
  1 file changed, 2 insertions(+), 3 deletions(-)
 
 diff --git a/app/assets/stylesheets/pages/issues.scss b/app/assets/stylesheets/pages/issues.scss
-index ad92cc2..3623dbc 100644
+index 7ac4bc4..1dd7ee2 100644
 --- a/app/assets/stylesheets/pages/issues.scss
 +++ b/app/assets/stylesheets/pages/issues.scss
 @@ -1,10 +1,9 @@
@@ -19,14 +19,14 @@ index ad92cc2..3623dbc 100644
      position: relative;
  
      .issue-title {
--      margin-bottom: 5px;
-       font-size: $list-font-size;
-       font-weight: 600;
+-      margin-bottom: 2px;
      }
-@@ -148,4 +147,4 @@ form.edit-issue {
- .issue-closed-by-widget {
-   color: $secondary-text;
-   margin-left: 52px;
+ 
+     .issue-check {
+@@ -140,4 +139,4 @@ form.edit-issue {
+   @media (min-width: $screen-sm-min) {
+     display: inline-block;
+   }
 -}
 \ No newline at end of file
 +}

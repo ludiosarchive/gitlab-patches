@@ -1,17 +1,17 @@
-From 48d25793805148159457b3b2b36ee77c56e07956 Mon Sep 17 00:00:00 2001
+From aa5865a1d14fa481ac4556931fb138c445f8f9dd Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
-Date: Fri, 5 Feb 2016 07:47:30 +0000
+Date: Wed, 23 Mar 2016 07:59:48 +0000
 Subject: [PATCH 12/12] Make even more text black
 
 ---
  app/assets/stylesheets/framework/typography.scss | 2 --
  app/assets/stylesheets/pages/detail_page.scss    | 3 ---
  app/assets/stylesheets/pages/merge_requests.scss | 1 -
- app/assets/stylesheets/pages/projects.scss       | 2 --
- 4 files changed, 8 deletions(-)
+ app/assets/stylesheets/pages/projects.scss       | 1 -
+ 4 files changed, 7 deletions(-)
 
 diff --git a/app/assets/stylesheets/framework/typography.scss b/app/assets/stylesheets/framework/typography.scss
-index d7de67d..735abb5 100644
+index 3907334..731c59e 100644
 --- a/app/assets/stylesheets/framework/typography.scss
 +++ b/app/assets/stylesheets/framework/typography.scss
 @@ -85,7 +85,6 @@
@@ -19,19 +19,19 @@ index d7de67d..735abb5 100644
  
    p {
 -    color: #5c5d5e;
-     margin: 6px 0 0 0;
+     margin: 6px 0 0;
    }
  
 @@ -93,7 +92,6 @@
      @extend .table;
      @extend .table-bordered;
-     margin: 12px 0 12px 0;
+     margin: 12px 0;
 -    color: #5c5d5e;
      th {
        background: #f8fafc;
      }
 diff --git a/app/assets/stylesheets/pages/detail_page.scss b/app/assets/stylesheets/pages/detail_page.scss
-index 529a435..c127f67 100644
+index d3eda1a..467f1fd 100644
 --- a/app/assets/stylesheets/pages/detail_page.scss
 +++ b/app/assets/stylesheets/pages/detail_page.scss
 @@ -1,16 +1,13 @@
@@ -49,10 +49,10 @@ index 529a435..c127f67 100644
    .identifier {
 -    color: #5c5d5e;
    }
- }
  
+   .issue_created_ago, .author_link {
 diff --git a/app/assets/stylesheets/pages/merge_requests.scss b/app/assets/stylesheets/pages/merge_requests.scss
-index 75f2ae8..4034f99 100644
+index cee5c47..23d2e85 100644
 --- a/app/assets/stylesheets/pages/merge_requests.scss
 +++ b/app/assets/stylesheets/pages/merge_requests.scss
 @@ -96,7 +96,6 @@
@@ -64,19 +64,11 @@ index 75f2ae8..4034f99 100644
  
    .mr-widget-body {
 diff --git a/app/assets/stylesheets/pages/projects.scss b/app/assets/stylesheets/pages/projects.scss
-index 13b0ed7..8f03349 100644
+index c68bd67..bba6469 100644
 --- a/app/assets/stylesheets/pages/projects.scss
 +++ b/app/assets/stylesheets/pages/projects.scss
-@@ -75,7 +75,6 @@
- 
-     p {
-       padding: 0 $gl-padding;
--      color: #5c5d5e;
-     }
-   }
- 
-@@ -406,7 +405,6 @@ pre.light-well {
-   margin: 0 7px 0 7px;
+@@ -314,7 +314,6 @@ pre.light-well {
+   margin: 0 7px;
  
    h5 {
 -    color: #5c5d5e;

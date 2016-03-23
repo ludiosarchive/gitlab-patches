@@ -1,4 +1,4 @@
-From 0e8ec86b496872980daec26421f39947ed56a65a Mon Sep 17 00:00:00 2001
+From d356a7ae5f71371f75342e6f94d6abf60c0bc590 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Tue, 2 Feb 2016 14:20:29 +0000
 Subject: [PATCH 01/12] Never send referrer
@@ -8,7 +8,7 @@ Subject: [PATCH 01/12] Never send referrer
  1 file changed, 1 insertion(+), 2 deletions(-)
 
 diff --git a/app/views/layouts/_head.html.haml b/app/views/layouts/_head.html.haml
-index 38ca4f9..a6045d9 100644
+index 79cdbac..e85b79d 100644
 --- a/app/views/layouts/_head.html.haml
 +++ b/app/views/layouts/_head.html.haml
 @@ -4,6 +4,7 @@
