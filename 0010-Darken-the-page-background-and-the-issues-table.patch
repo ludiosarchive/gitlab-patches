@@ -1,7 +1,7 @@
-From 4826a0687b6a4eb9cc704d142f52ca01f6a0d9e7 Mon Sep 17 00:00:00 2001
+From dd140ba4f3044d049ef1a9adad1d6455dbd67780 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
-Date: Wed, 23 Mar 2016 07:56:35 +0000
-Subject: [PATCH 10/13] Darken the page background and the issues table
+Date: Fri, 6 May 2016 09:24:02 +0000
+Subject: [PATCH 10/12] Darken the page background and the issues table
 
 ---
  app/assets/stylesheets/framework/layout.scss    | 2 ++
@@ -23,10 +23,10 @@ index 8bb047d..7883331 100644
      background-color: white !important;
    }
 diff --git a/app/assets/stylesheets/framework/sidebar.scss b/app/assets/stylesheets/framework/sidebar.scss
-index be05db5..48debb9 100644
+index 18189e9..117f744 100644
 --- a/app/assets/stylesheets/framework/sidebar.scss
 +++ b/app/assets/stylesheets/framework/sidebar.scss
-@@ -47,7 +47,7 @@
+@@ -36,7 +36,7 @@
    width: 100%;
  
    .container-fluid {
@@ -36,18 +36,18 @@ index be05db5..48debb9 100644
  
      &.container-blank {
 diff --git a/app/assets/stylesheets/framework/variables.scss b/app/assets/stylesheets/framework/variables.scss
-index 680615d..b13b418 100644
+index 9d7a4a3..e9b47fa 100644
 --- a/app/assets/stylesheets/framework/variables.scss
 +++ b/app/assets/stylesheets/framework/variables.scss
-@@ -19,7 +19,7 @@ $avatar_radius: 50%;
- $code_font_size: 13px;
- $code_line_height: 1.5;
- $border-color: #efeff1;
+@@ -12,7 +12,7 @@ $gutter_inner_width: 258px;
+  */
+ $border-color:       #e5e5e5;
+ $focus-border-color: #3aabf0;
 -$table-border-color: #eef0f2;
 +$table-border-color: #ddd;
- $background-color: #faf9f9;
- $header-height: 58px;
- $fixed-layout-width: 1280px;
+ $background-color:   #fafafa;
+ 
+ /*
 -- 
 1.9.1
 

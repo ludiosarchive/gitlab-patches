@@ -1,7 +1,7 @@
-From 46d5b1e20d04fa790066d303cc2597b08393ddff Mon Sep 17 00:00:00 2001
+From 363445e88f70d537c1b313440a1cf841d1619f5e Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
-Date: Wed, 23 Mar 2016 07:55:14 +0000
-Subject: [PATCH 09/13] Remove nicescroll to fix 100% CPU use:
+Date: Fri, 6 May 2016 09:22:42 +0000
+Subject: [PATCH 09/12] Remove nicescroll to fix 100% CPU use:
  https://gitlab.com/gitlab-org/gitlab-ce/issues/342#note_2473360
 
 ---
@@ -9,18 +9,18 @@ Subject: [PATCH 09/13] Remove nicescroll to fix 100% CPU use:
  1 file changed, 3 deletions(-)
 
 diff --git a/app/assets/javascripts/application.js.coffee b/app/assets/javascripts/application.js.coffee
-index 7f98332..1ba71b1 100644
+index 5bac8ee..5acda3d 100644
 --- a/app/assets/javascripts/application.js.coffee
 +++ b/app/assets/javascripts/application.js.coffee
-@@ -40,7 +40,6 @@
+@@ -50,7 +50,6 @@
  #= require shortcuts_dashboard_navigation
  #= require shortcuts_issuable
  #= require shortcuts_network
 -#= require jquery.nicescroll
+ #= require date.format
  #= require_tree .
  #= require fuzzaldrin-plus
- 
-@@ -110,8 +109,6 @@ window.onload = ->
+@@ -122,8 +121,6 @@ window.onload = ->
  $ ->
    bootstrapBreakpoint = bp.getBreakpointSize()
  

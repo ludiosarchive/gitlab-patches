@@ -1,7 +1,7 @@
-From dd33de66d3a929b044001acfcecccde047928eef Mon Sep 17 00:00:00 2001
+From fdad6582f30321845c69cfe1a0015e11cb70b8aa Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
-Date: Wed, 23 Mar 2016 07:54:38 +0000
-Subject: [PATCH 08/13] Use a properly black text color
+Date: Fri, 6 May 2016 09:22:02 +0000
+Subject: [PATCH 08/12] Use a properly black text color
 
 ---
  app/assets/stylesheets/framework/variables.scss | 6 +++---
@@ -9,38 +9,35 @@ Subject: [PATCH 08/13] Use a properly black text color
  2 files changed, 4 insertions(+), 4 deletions(-)
 
 diff --git a/app/assets/stylesheets/framework/variables.scss b/app/assets/stylesheets/framework/variables.scss
-index a829568..680615d 100644
+index 84b53a4..9d7a4a3 100644
 --- a/app/assets/stylesheets/framework/variables.scss
 +++ b/app/assets/stylesheets/framework/variables.scss
-@@ -5,7 +5,7 @@ $gl-text-red: #d12f19;
- $gl-text-orange: #d90;
- $gl-header-color: #323232;
- $gl-link-color: #333c48;
--$md-text-color: #444;
-+$md-text-color: #000;
- $md-link-color: #3084bb;
- $progress-color: #c0392b;
- $gl-font-size: 14px;
-@@ -32,8 +32,8 @@ $gl-avatar-size: 40px;
- $secondary-text: #7f8fa4;
- $error-exclamation-point: #e62958;
- $border-radius-default: 3px;
--$list-title-color: #333;
--$list-text-color: #555;
-+$list-title-color: #000;
-+$list-text-color: #000;
- 
- $btn-transparent-color: #8f8f8f;
- 
+@@ -19,13 +19,13 @@ $background-color:   #fafafa;
+  * Text
+  */
+ $gl-font-size:         14px;
+-$gl-title-color:       #333;
+-$gl-text-color:        #555;
++$gl-title-color:       #000;
++$gl-text-color:        #000;
+ $gl-text-green:        #4a2;
+ $gl-text-red:          #d12f19;
+ $gl-text-orange:       #d90;
+ $gl-link-color:        #3084bb;
+-$gl-dark-link-color:   #333;
++$gl-dark-link-color:   #000;
+ $gl-placeholder-color: #8f8f8f;
+ $gl-icon-color:        $gl-placeholder-color;
+ $gl-grayish-blue:      #7f8fa4;
 diff --git a/app/assets/stylesheets/pages/issues.scss b/app/assets/stylesheets/pages/issues.scss
-index f1a0d3e..3fb4409 100644
+index dacbbbb..678ee5d 100644
 --- a/app/assets/stylesheets/pages/issues.scss
 +++ b/app/assets/stylesheets/pages/issues.scss
 @@ -1,6 +1,6 @@
  h2.issue-title {
    font-size: 30px;
 -  color: #333;
-+  color: #000;
++  color: $gl-text-color;
  }
  
  .issues-list {

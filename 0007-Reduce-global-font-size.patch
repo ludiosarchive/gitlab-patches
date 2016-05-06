@@ -1,27 +1,25 @@
-From 9b7636cdf9dcf5b9c15f920fb60780cb6fc0b9dc Mon Sep 17 00:00:00 2001
+From 4e102e8a19c4d52c46011b62e1abbc2aeab7ef18 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
-Date: Wed, 23 Mar 2016 07:53:05 +0000
-Subject: [PATCH 07/13] Reduce global font size
+Date: Fri, 6 May 2016 09:19:54 +0000
+Subject: [PATCH 07/12] Reduce global font size
 
 ---
- app/assets/stylesheets/framework/variables.scss | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+ app/assets/stylesheets/framework/variables.scss | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/app/assets/stylesheets/framework/variables.scss b/app/assets/stylesheets/framework/variables.scss
-index 2867d02..a829568 100644
+index 2b3ff26..84b53a4 100644
 --- a/app/assets/stylesheets/framework/variables.scss
 +++ b/app/assets/stylesheets/framework/variables.scss
-@@ -8,8 +8,8 @@ $gl-link-color: #333c48;
- $md-text-color: #444;
- $md-link-color: #3084bb;
- $progress-color: #c0392b;
--$gl-font-size: 15px;
--$list-font-size: 15px;
-+$gl-font-size: 14px;
-+$list-font-size: 14px;
- $sidebar_collapsed_width: 62px;
- $sidebar_width: 230px;
- $gutter_collapsed_width: 62px;
+@@ -18,7 +18,7 @@ $background-color:   #fafafa;
+ /*
+  * Text
+  */
+-$gl-font-size:         15px;
++$gl-font-size:         14px;
+ $gl-title-color:       #333;
+ $gl-text-color:        #555;
+ $gl-text-green:        #4a2;
 -- 
 1.9.1
 

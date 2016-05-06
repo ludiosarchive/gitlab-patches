@@ -1,17 +1,17 @@
-From 6a73374e0c850a7751f1bcfbc600def4fd2d3aa3 Mon Sep 17 00:00:00 2001
+From 4b1bdfde0f47af7479c3cc90ebebb3fa3fa2efb3 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Wed, 23 Mar 2016 07:47:33 +0000
-Subject: [PATCH 02/13] Respect the browser-configured fonts
+Subject: [PATCH 02/12] Respect the browser-configured fonts
 
 ---
  app/assets/stylesheets/framework/variables.scss | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/app/assets/stylesheets/framework/variables.scss b/app/assets/stylesheets/framework/variables.scss
-index 211ead7..2867d02 100644
+index 30ca27a..2b3ff26 100644
 --- a/app/assets/stylesheets/framework/variables.scss
 +++ b/app/assets/stylesheets/framework/variables.scss
-@@ -130,8 +130,8 @@ $deleted: #f77;
+@@ -173,8 +173,8 @@ $table-border-gray: #f0f0f0;
  /*
   * Fonts
   */
