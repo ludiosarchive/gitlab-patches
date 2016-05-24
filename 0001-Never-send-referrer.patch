@@ -1,4 +1,4 @@
-From 3b49b7c9c80c4f0b5b64485d50f35e98dd9a62a4 Mon Sep 17 00:00:00 2001
+From 9d7cae18b9678a42c59f91a1a9244628108b22c3 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Fri, 6 May 2016 09:16:46 +0000
 Subject: [PATCH 01/12] Never send referrer
@@ -22,5 +22,5 @@ index 79cdbac..9999e8a 100644
    %meta{name: 'theme-color', content: '#474D57'}
  
 -- 
-1.9.1
+2.7.4
 

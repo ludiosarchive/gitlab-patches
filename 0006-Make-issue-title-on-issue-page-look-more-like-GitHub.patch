@@ -1,4 +1,4 @@
-From 1b4f6702179170cad78d8be15d8e871b19e94142 Mon Sep 17 00:00:00 2001
+From a845af5e0eb4fb1d7d89b5cd173362854b43b546 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Wed, 23 Mar 2016 07:52:24 +0000
 Subject: [PATCH 06/12] Make issue title on issue page look more like GitHub's
@@ -21,5 +21,5 @@ index 08fd1aa..dacbbbb 100644
    .issue {
      padding: 3px 16px 2px 16px;
 -- 
-1.9.1
+2.7.4
 

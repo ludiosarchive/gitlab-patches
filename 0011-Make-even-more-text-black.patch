@@ -1,4 +1,4 @@
-From f476ea30719d11fdd9c9773382c90052d5e67944 Mon Sep 17 00:00:00 2001
+From 21414612dff5bf206092a8fa231528bf33b6849c Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Fri, 6 May 2016 09:25:15 +0000
 Subject: [PATCH 11/12] Make even more text black
@@ -11,7 +11,7 @@ Subject: [PATCH 11/12] Make even more text black
  4 files changed, 8 deletions(-)
 
 diff --git a/app/assets/stylesheets/framework/typography.scss b/app/assets/stylesheets/framework/typography.scss
-index 0a5b4b8..ba4c402 100644
+index 3575984..6e1a68d 100644
 --- a/app/assets/stylesheets/framework/typography.scss
 +++ b/app/assets/stylesheets/framework/typography.scss
 @@ -73,7 +73,6 @@
@@ -45,7 +45,7 @@ index 0a5b4b8..ba4c402 100644
        background: #f8fafc;
      }
 diff --git a/app/assets/stylesheets/pages/detail_page.scss b/app/assets/stylesheets/pages/detail_page.scss
-index 3438dbe..a946595 100644
+index 5e61e61..3a7fdb6 100644
 --- a/app/assets/stylesheets/pages/detail_page.scss
 +++ b/app/assets/stylesheets/pages/detail_page.scss
 @@ -6,11 +6,9 @@
@@ -61,7 +61,7 @@ index 3438dbe..a946595 100644
  
    .issue_created_ago, .author_link {
 diff --git a/app/assets/stylesheets/pages/merge_requests.scss b/app/assets/stylesheets/pages/merge_requests.scss
-index 4ef548f..bc43c6b 100644
+index c4005ba..ddd321d 100644
 --- a/app/assets/stylesheets/pages/merge_requests.scss
 +++ b/app/assets/stylesheets/pages/merge_requests.scss
 @@ -96,7 +96,6 @@
@@ -73,10 +73,10 @@ index 4ef548f..bc43c6b 100644
  
    .mr-widget-body {
 diff --git a/app/assets/stylesheets/pages/projects.scss b/app/assets/stylesheets/pages/projects.scss
-index fcca9d4..711c9c5 100644
+index a3690e4..642b1a2 100644
 --- a/app/assets/stylesheets/pages/projects.scss
 +++ b/app/assets/stylesheets/pages/projects.scss
-@@ -318,7 +318,6 @@ pre.light-well {
+@@ -335,7 +335,6 @@ pre.light-well {
    margin: 0 7px 7px;
  
    h5 {
@@ -85,5 +85,5 @@ index fcca9d4..711c9c5 100644
  
    .light-well {
 -- 
-1.9.1
+2.7.4
 

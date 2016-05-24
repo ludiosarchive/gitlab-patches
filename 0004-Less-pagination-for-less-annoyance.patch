@@ -1,4 +1,4 @@
-From ba0b0fc7c95f163fab5cf98d8162c7d65702fe51 Mon Sep 17 00:00:00 2001
+From 7a530d25024c9569f22534d15bddf9707e4d948e Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Fri, 6 May 2016 09:18:58 +0000
 Subject: [PATCH 04/12] Less pagination for less annoyance
@@ -21,5 +21,5 @@ index 3cbe9a0..46bb4fb 100644
    # config.outer_window = 0
    # config.left = 0
 -- 
-1.9.1
+2.7.4
 

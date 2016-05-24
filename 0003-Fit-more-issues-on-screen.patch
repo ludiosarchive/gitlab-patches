@@ -1,4 +1,4 @@
-From 5373d3f58b6acd452baf2d95b37456a3d4928e6e Mon Sep 17 00:00:00 2001
+From 146618afd0f57011bd3b303289d127bf0ee7e804 Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Fri, 6 May 2016 09:17:58 +0000
 Subject: [PATCH 03/12] Fit more issues on screen
@@ -24,5 +24,5 @@ index fc9db97..08fd1aa 100644
  
      .issue-check {
 -- 
-1.9.1
+2.7.4
 

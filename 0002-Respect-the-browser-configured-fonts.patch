@@ -1,4 +1,4 @@
-From 4b1bdfde0f47af7479c3cc90ebebb3fa3fa2efb3 Mon Sep 17 00:00:00 2001
+From f2984f9ae27855960e9bd5a8a33a497fcdc406db Mon Sep 17 00:00:00 2001
 From: root <root@gitlab>
 Date: Wed, 23 Mar 2016 07:47:33 +0000
 Subject: [PATCH 02/12] Respect the browser-configured fonts
@@ -8,10 +8,10 @@ Subject: [PATCH 02/12] Respect the browser-configured fonts
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/app/assets/stylesheets/framework/variables.scss b/app/assets/stylesheets/framework/variables.scss
-index 30ca27a..2b3ff26 100644
+index c5a4dbe..50108c0 100644
 --- a/app/assets/stylesheets/framework/variables.scss
 +++ b/app/assets/stylesheets/framework/variables.scss
-@@ -173,8 +173,8 @@ $table-border-gray: #f0f0f0;
+@@ -182,8 +182,8 @@ $line-select-yellow-dark: #f0e2bd;
  /*
   * Fonts
   */
@@ -23,5 +23,5 @@ index 30ca27a..2b3ff26 100644
  /*
  * Dropdowns
 -- 
-1.9.1
+2.7.4
 
