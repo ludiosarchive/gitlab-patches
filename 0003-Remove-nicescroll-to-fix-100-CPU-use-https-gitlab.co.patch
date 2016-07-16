@@ -1,7 +1,7 @@
-From b44b5734d4767f41b3de320a15f364d2a3b1e85c Mon Sep 17 00:00:00 2001
-From: root <root@gitlab>
-Date: Fri, 6 May 2016 09:22:42 +0000
-Subject: [PATCH 09/12] Remove nicescroll to fix 100% CPU use:
+From 16e120c8f2c44ecb20b1f96f315675785f19f700 Mon Sep 17 00:00:00 2001
+From: root <root@xenialbase>
+Date: Sat, 16 Jul 2016 07:32:49 +0000
+Subject: [PATCH 3/4] Remove nicescroll to fix 100% CPU use:
  https://gitlab.com/gitlab-org/gitlab-ce/issues/342#note_2473360
 
 ---
@@ -9,22 +9,22 @@ Subject: [PATCH 09/12] Remove nicescroll to fix 100% CPU use:
  1 file changed, 3 deletions(-)
 
 diff --git a/app/assets/javascripts/application.js.coffee b/app/assets/javascripts/application.js.coffee
-index bffce5a..ed1e227 100644
+index e13a010..60aad1a 100644
 --- a/app/assets/javascripts/application.js.coffee
 +++ b/app/assets/javascripts/application.js.coffee
-@@ -50,7 +50,6 @@
+@@ -43,7 +43,6 @@
  #= require shortcuts_dashboard_navigation
  #= require shortcuts_issuable
  #= require shortcuts_network
 -#= require jquery.nicescroll
  #= require date.format
- #= require_tree .
- #= require fuzzaldrin-plus
-@@ -122,8 +121,6 @@ window.onload = ->
- $ ->
+ #= require_directory ./behaviors
+ #= require_directory ./blob
+@@ -124,8 +123,6 @@ $ ->
+   gl.utils.preventDisabledButtons()
    bootstrapBreakpoint = bp.getBreakpointSize()
  
--  $(".nicescroll").niceScroll(cursoropacitymax: '0.4', cursorcolor: '#FFF', cursorborder: "1px solid #FFF")
+-  $(".nav-sidebar").niceScroll(cursoropacitymax: '0.4', cursorcolor: '#FFF', cursorborder: "1px solid #FFF")
 -
    # Click a .js-select-on-focus field, select the contents
    $(".js-select-on-focus").on "focusin", ->

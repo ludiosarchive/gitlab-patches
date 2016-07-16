@@ -1,23 +1,23 @@
-From 9d7cae18b9678a42c59f91a1a9244628108b22c3 Mon Sep 17 00:00:00 2001
-From: root <root@gitlab>
-Date: Fri, 6 May 2016 09:16:46 +0000
-Subject: [PATCH 01/12] Never send referrer
+From 428bfe6a1987dcc03578421f998f8f41f8934e87 Mon Sep 17 00:00:00 2001
+From: root <root@xenialbase>
+Date: Sat, 16 Jul 2016 07:27:29 +0000
+Subject: [PATCH 1/4] Send referrer only on same origin
 
 ---
  app/views/layouts/_head.html.haml | 3 +--
  1 file changed, 1 insertion(+), 2 deletions(-)
 
 diff --git a/app/views/layouts/_head.html.haml b/app/views/layouts/_head.html.haml
-index 79cdbac..9999e8a 100644
+index e0ed657..2a0690c 100644
 --- a/app/views/layouts/_head.html.haml
 +++ b/app/views/layouts/_head.html.haml
-@@ -34,8 +34,7 @@
+@@ -35,8 +35,7 @@
  
-   = include_gon
+   = csrf_meta_tags
  
 -  - unless browser.safari?
 -    %meta{name: 'referrer', content: 'origin-when-cross-origin'}
-+  %meta{name: 'referrer', content: 'no-referrer'}
++  %meta{name: 'referrer', content: 'same-origin'}
    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1'}
    %meta{name: 'theme-color', content: '#474D57'}
  

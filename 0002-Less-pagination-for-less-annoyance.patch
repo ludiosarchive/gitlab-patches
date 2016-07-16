@@ -1,7 +1,7 @@
-From 7a530d25024c9569f22534d15bddf9707e4d948e Mon Sep 17 00:00:00 2001
-From: root <root@gitlab>
-Date: Fri, 6 May 2016 09:18:58 +0000
-Subject: [PATCH 04/12] Less pagination for less annoyance
+From f9e6fc3befa2b077d312f664c9d94777cb1a2fa4 Mon Sep 17 00:00:00 2001
+From: root <root@xenialbase>
+Date: Sat, 16 Jul 2016 07:28:18 +0000
+Subject: [PATCH 2/4] Less pagination for less annoyance
 
 ---
  config/initializers/kaminari_config.rb | 4 ++--
