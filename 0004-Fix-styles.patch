@@ -1,4 +1,4 @@
-From 5dcd4ac8b15425f9557fbc659f6d7a6a1acf8575 Mon Sep 17 00:00:00 2001
+From 766e5a53bcde7f16559057733625ba07ae58e363 Mon Sep 17 00:00:00 2001
 From: root <root@xenialbase>
 Date: Sat, 16 Jul 2016 07:58:30 +0000
 Subject: [PATCH 4/4] Fix styles
@@ -17,10 +17,10 @@ Subject: [PATCH 4/4] Fix styles
  10 files changed, 20 insertions(+), 18 deletions(-)
 
 diff --git a/app/assets/stylesheets/framework/blocks.scss b/app/assets/stylesheets/framework/blocks.scss
-index 3802381..2412b78 100644
+index 7ce203d..66cb7ee 100644
 --- a/app/assets/stylesheets/framework/blocks.scss
 +++ b/app/assets/stylesheets/framework/blocks.scss
-@@ -157,7 +157,7 @@
+@@ -166,7 +166,7 @@
  
      p {
        padding: 0 $gl-padding;
@@ -43,10 +43,10 @@ index 8bb047d..8cba2ba 100644
      background-color: white !important;
    }
 diff --git a/app/assets/stylesheets/framework/sidebar.scss b/app/assets/stylesheets/framework/sidebar.scss
-index 98f917c..694ef96 100644
+index 3fa4a22..eb46305 100644
 --- a/app/assets/stylesheets/framework/sidebar.scss
 +++ b/app/assets/stylesheets/framework/sidebar.scss
-@@ -28,7 +28,7 @@
+@@ -36,7 +36,7 @@
    transition: padding $sidebar-transition-duration;
  
    .container-fluid {
@@ -78,10 +78,10 @@ index 3575984..73f2860 100644
        background: #f8fafc;
      }
 diff --git a/app/assets/stylesheets/framework/variables.scss b/app/assets/stylesheets/framework/variables.scss
-index 211a9af..b995538 100644
+index f0e7002..638bdec 100644
 --- a/app/assets/stylesheets/framework/variables.scss
 +++ b/app/assets/stylesheets/framework/variables.scss
-@@ -21,18 +21,18 @@ $background-color:   #fafafa;
+@@ -23,18 +23,18 @@ $table-text-gray:       #8f8f8f;
   * Text
   */
  $gl-font-size:         15px;
@@ -148,7 +148,7 @@ index 1b389d8..3936755 100644
  
    .description {
 diff --git a/app/assets/stylesheets/pages/issues.scss b/app/assets/stylesheets/pages/issues.scss
-index 4e35ca3..b64ea0f 100644
+index 188ba86..aa8ec49 100644
 --- a/app/assets/stylesheets/pages/issues.scss
 +++ b/app/assets/stylesheets/pages/issues.scss
 @@ -1,10 +1,9 @@
@@ -164,10 +164,10 @@ index 4e35ca3..b64ea0f 100644
  
      .issue-check {
 diff --git a/app/assets/stylesheets/pages/merge_requests.scss b/app/assets/stylesheets/pages/merge_requests.scss
-index d9756b6..470971e 100644
+index db29593..27c1cf1 100644
 --- a/app/assets/stylesheets/pages/merge_requests.scss
 +++ b/app/assets/stylesheets/pages/merge_requests.scss
-@@ -99,7 +99,7 @@
+@@ -113,7 +113,7 @@
    }
  
    .normal {
@@ -177,10 +177,10 @@ index d9756b6..470971e 100644
  
    .mr-widget-body {
 diff --git a/app/assets/stylesheets/pages/projects.scss b/app/assets/stylesheets/pages/projects.scss
-index 6864153..a1f71ae 100644
+index cc3aef5..e71056d 100644
 --- a/app/assets/stylesheets/pages/projects.scss
 +++ b/app/assets/stylesheets/pages/projects.scss
-@@ -419,7 +419,7 @@ pre.light-well {
+@@ -479,7 +479,7 @@ pre.light-well {
    margin: 0 7px 7px;
  
    h5 {
@@ -190,7 +190,7 @@ index 6864153..a1f71ae 100644
  
    .light-well {
 diff --git a/app/assets/stylesheets/pages/todos.scss b/app/assets/stylesheets/pages/todos.scss
-index afc00a6..fe1475f 100644
+index cf16d07..9eb218e 100644
 --- a/app/assets/stylesheets/pages/todos.scss
 +++ b/app/assets/stylesheets/pages/todos.scss
 @@ -58,7 +58,7 @@

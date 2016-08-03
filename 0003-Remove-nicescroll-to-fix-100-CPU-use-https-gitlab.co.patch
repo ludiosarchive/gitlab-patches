@@ -1,4 +1,4 @@
-From 16e120c8f2c44ecb20b1f96f315675785f19f700 Mon Sep 17 00:00:00 2001
+From d164ba27a76141961a755822db6dc442b3ef8648 Mon Sep 17 00:00:00 2001
 From: root <root@xenialbase>
 Date: Sat, 16 Jul 2016 07:32:49 +0000
 Subject: [PATCH 3/4] Remove nicescroll to fix 100% CPU use:
@@ -9,7 +9,7 @@ Subject: [PATCH 3/4] Remove nicescroll to fix 100% CPU use:
  1 file changed, 3 deletions(-)
 
 diff --git a/app/assets/javascripts/application.js.coffee b/app/assets/javascripts/application.js.coffee
-index e13a010..60aad1a 100644
+index eceff6d..9f86777 100644
 --- a/app/assets/javascripts/application.js.coffee
 +++ b/app/assets/javascripts/application.js.coffee
 @@ -43,7 +43,6 @@
@@ -20,7 +20,7 @@ index e13a010..60aad1a 100644
  #= require date.format
  #= require_directory ./behaviors
  #= require_directory ./blob
-@@ -124,8 +123,6 @@ $ ->
+@@ -126,8 +125,6 @@ $ ->
    gl.utils.preventDisabledButtons()
    bootstrapBreakpoint = bp.getBreakpointSize()
  
