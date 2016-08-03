@@ -1,4 +1,4 @@
-From 0c0158400267b3f35043e4ecc7db5e7353503908 Mon Sep 17 00:00:00 2001
+From 9efc7a907cdba858fa274d8e73765ec806b19179 Mon Sep 17 00:00:00 2001
 From: root <root@xenialbase>
 Date: Sat, 16 Jul 2016 07:28:18 +0000
 Subject: [PATCH 2/4] Less pagination for less annoyance
@@ -8,15 +8,15 @@ Subject: [PATCH 2/4] Less pagination for less annoyance
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/config/initializers/kaminari_config.rb b/config/initializers/kaminari_config.rb
-index 3cbe9a0..46bb4fb 100644
+index 3cbe9a0..0eb17a3 100644
 --- a/config/initializers/kaminari_config.rb
 +++ b/config/initializers/kaminari_config.rb
 @@ -1,6 +1,6 @@
  Kaminari.configure do |config|
 -  config.default_per_page = 20
 -  config.max_per_page = 100
-+  config.default_per_page = 300
-+  config.max_per_page = 300
++  config.default_per_page = 500
++  config.max_per_page = 500
    # config.window = 4
    # config.outer_window = 0
    # config.left = 0
