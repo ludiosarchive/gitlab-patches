@@ -1,7 +1,7 @@
-From e162c640ddd301550dddcadaed3ae42986aa61c5 Mon Sep 17 00:00:00 2001
+From d79b98d1d6a03274ac92b05abedf54ee18a6d781 Mon Sep 17 00:00:00 2001
 From: root <root@xenialbase>
 Date: Sat, 16 Jul 2016 07:58:30 +0000
-Subject: [PATCH 4/4] Fix styles
+Subject: [PATCH 3/4] Fix styles
 
 ---
  app/assets/stylesheets/framework/blocks.scss     |  2 +-
@@ -43,7 +43,7 @@ index 8bb047d..8cba2ba 100644
      background-color: white !important;
    }
 diff --git a/app/assets/stylesheets/framework/sidebar.scss b/app/assets/stylesheets/framework/sidebar.scss
-index 3fa4a22..eb46305 100644
+index 015fe3d..802c7c9 100644
 --- a/app/assets/stylesheets/framework/sidebar.scss
 +++ b/app/assets/stylesheets/framework/sidebar.scss
 @@ -36,7 +36,7 @@
@@ -56,10 +56,10 @@ index 3fa4a22..eb46305 100644
  
      &.container-blank {
 diff --git a/app/assets/stylesheets/framework/typography.scss b/app/assets/stylesheets/framework/typography.scss
-index 3575984..73f2860 100644
+index 06874a9..0fe5225 100644
 --- a/app/assets/stylesheets/framework/typography.scss
 +++ b/app/assets/stylesheets/framework/typography.scss
-@@ -87,7 +87,7 @@
+@@ -97,7 +97,7 @@
    }
  
    p {
@@ -68,7 +68,7 @@ index 3575984..73f2860 100644
      margin: 6px 0 0;
    }
  
-@@ -95,7 +95,7 @@
+@@ -105,7 +105,7 @@
      @extend .table;
      @extend .table-bordered;
      margin: 12px 0;
@@ -78,7 +78,7 @@ index 3575984..73f2860 100644
        background: #f8fafc;
      }
 diff --git a/app/assets/stylesheets/framework/variables.scss b/app/assets/stylesheets/framework/variables.scss
-index f0e7002..638bdec 100644
+index 5da3901..a361024 100644
 --- a/app/assets/stylesheets/framework/variables.scss
 +++ b/app/assets/stylesheets/framework/variables.scss
 @@ -23,18 +23,18 @@ $table-text-gray:       #8f8f8f;
@@ -104,7 +104,7 @@ index f0e7002..638bdec 100644
  $gl-header-color:      $gl-title-color;
  
  /*
-@@ -194,8 +194,8 @@ $line-select-yellow-dark: #f0e2bd;
+@@ -195,8 +195,8 @@ $line-select-yellow-dark: #f0e2bd;
  /*
   * Fonts
   */
@@ -116,7 +116,7 @@ index f0e7002..638bdec 100644
  /*
  * Dropdowns
 diff --git a/app/assets/stylesheets/pages/detail_page.scss b/app/assets/stylesheets/pages/detail_page.scss
-index 1b389d8..3936755 100644
+index 4d9c73c..cc0ac71 100644
 --- a/app/assets/stylesheets/pages/detail_page.scss
 +++ b/app/assets/stylesheets/pages/detail_page.scss
 @@ -1,16 +1,16 @@
@@ -148,7 +148,7 @@ index 1b389d8..3936755 100644
  
    .description {
 diff --git a/app/assets/stylesheets/pages/issues.scss b/app/assets/stylesheets/pages/issues.scss
-index 188ba86..aa8ec49 100644
+index dfe1e30..13d640a 100644
 --- a/app/assets/stylesheets/pages/issues.scss
 +++ b/app/assets/stylesheets/pages/issues.scss
 @@ -1,10 +1,9 @@
@@ -164,10 +164,10 @@ index 188ba86..aa8ec49 100644
  
      .issue-check {
 diff --git a/app/assets/stylesheets/pages/merge_requests.scss b/app/assets/stylesheets/pages/merge_requests.scss
-index db29593..27c1cf1 100644
+index fcdaf67..f2b811e 100644
 --- a/app/assets/stylesheets/pages/merge_requests.scss
 +++ b/app/assets/stylesheets/pages/merge_requests.scss
-@@ -113,7 +113,7 @@
+@@ -117,7 +117,7 @@
    }
  
    .normal {
@@ -177,7 +177,7 @@ index db29593..27c1cf1 100644
  
    .mr-widget-body {
 diff --git a/app/assets/stylesheets/pages/projects.scss b/app/assets/stylesheets/pages/projects.scss
-index cc3aef5..e71056d 100644
+index 91253ed..6fa362d 100644
 --- a/app/assets/stylesheets/pages/projects.scss
 +++ b/app/assets/stylesheets/pages/projects.scss
 @@ -479,7 +479,7 @@ pre.light-well {

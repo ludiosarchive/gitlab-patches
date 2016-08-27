@@ -1,0 +1,80 @@
+From 99ea4508903bbed51496d318998a3529bfe10916 Mon Sep 17 00:00:00 2001
+From: root <root@xenialbase>
+Date: Sat, 27 Aug 2016 00:58:01 +0000
+Subject: [PATCH 4/4] Remove nicescroll to fix 100% CPU use:
+ https://gitlab.com/gitlab-org/gitlab-ce/issues/342#note_2473360
+
+---
+ app/assets/javascripts/application.js      | 6 ------
+ app/assets/javascripts/build.js            | 1 -
+ app/assets/javascripts/issuable_context.js | 1 -
+ app/assets/javascripts/sidebar.js          | 5 -----
+ 4 files changed, 13 deletions(-)
+
+diff --git a/app/assets/javascripts/application.js b/app/assets/javascripts/application.js
+index ce9cbb6..c0d55f5 100644
+--- a/app/assets/javascripts/application.js
++++ b/app/assets/javascripts/application.js
+@@ -35,7 +35,6 @@
+ /*= require shortcuts_dashboard_navigation */
+ /*= require shortcuts_issuable */
+ /*= require shortcuts_network */
+-/*= require jquery.nicescroll */
+ /*= require date.format */
+ /*= require_directory ./behaviors */
+ /*= require_directory ./blob */
+@@ -140,11 +139,6 @@
+     $body = $('body');
+     gl.utils.preventDisabledButtons();
+     bootstrapBreakpoint = bp.getBreakpointSize();
+-    $(".nav-sidebar").niceScroll({
+-      cursoropacitymax: '0.4',
+-      cursorcolor: '#FFF',
+-      cursorborder: "1px solid #FFF"
+-    });
+     $(".js-select-on-focus").on("focusin", function() {
+       return $(this).select().one('mouseup', function(e) {
+         return e.preventDefault();
+diff --git a/app/assets/javascripts/build.js b/app/assets/javascripts/build.js
+index 0d7d29b..4964ce1 100644
+--- a/app/assets/javascripts/build.js
++++ b/app/assets/javascripts/build.js
+@@ -17,7 +17,6 @@
+       this.updateDropdown = bind(this.updateDropdown, this);
+       clearInterval(Build.interval);
+       this.bp = Breakpoints.get();
+-      $('.js-build-sidebar').niceScroll();
+ 
+       this.populateJobs(this.build_stage);
+       this.updateStageDropdownText(this.build_stage);
+diff --git a/app/assets/javascripts/issuable_context.js b/app/assets/javascripts/issuable_context.js
+index 8147e83..bf148db 100644
+--- a/app/assets/javascripts/issuable_context.js
++++ b/app/assets/javascripts/issuable_context.js
+@@ -34,7 +34,6 @@
+           }, 0);
+         }
+       });
+-      $(".right-sidebar").niceScroll();
+     }
+ 
+     IssuableContext.prototype.initParticipants = function() {
+diff --git a/app/assets/javascripts/sidebar.js b/app/assets/javascripts/sidebar.js
+index bd0c119..652924c 100644
+--- a/app/assets/javascripts/sidebar.js
++++ b/app/assets/javascripts/sidebar.js
+@@ -12,11 +12,6 @@
+       $('.navbar-fixed-top').toggleClass('header-pinned-nav');
+       $('.page-with-sidebar').toggleClass('page-sidebar-pinned');
+     }
+-    return setTimeout((function() {
+-      var niceScrollBars;
+-      niceScrollBars = $('.nav-sidebar').niceScroll();
+-      return niceScrollBars.updateScrollBar();
+-    }), 300);
+   };
+ 
+   $(document).off('click', 'body').on('click', 'body', function(e) {
+-- 
+2.7.4
+
