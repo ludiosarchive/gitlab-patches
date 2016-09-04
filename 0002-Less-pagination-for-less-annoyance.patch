@@ -1,12 +1,23 @@
-From e7ff01a77e1c4dd69f4e42d858c210e026a07226 Mon Sep 17 00:00:00 2001
+From 9606e64a5816b7bae9ed16fbd07ea246f130324b Mon Sep 17 00:00:00 2001
 From: root <root@xenialbase>
 Date: Sat, 16 Jul 2016 07:28:18 +0000
 Subject: [PATCH 2/4] Less pagination for less annoyance
 
 ---
- config/initializers/kaminari_config.rb | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+ app/views/shared/projects/_list.html.haml | 2 +-
+ config/initializers/kaminari_config.rb    | 4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
 
+diff --git a/app/views/shared/projects/_list.html.haml b/app/views/shared/projects/_list.html.haml
+index 3a9dd37..a3d2b95 100644
+--- a/app/views/shared/projects/_list.html.haml
++++ b/app/views/shared/projects/_list.html.haml
+@@ -1,4 +1,4 @@
+-- projects_limit = 20 unless local_assigns[:projects_limit]
++- projects_limit = 500 unless local_assigns[:projects_limit]
+ - avatar = true unless local_assigns[:avatar] == false
+ - use_creator_avatar = false unless local_assigns[:use_creator_avatar] == true
+ - stars = true unless local_assigns[:stars] == false
 diff --git a/config/initializers/kaminari_config.rb b/config/initializers/kaminari_config.rb
 index 3cbe9a0..0eb17a3 100644
 --- a/config/initializers/kaminari_config.rb

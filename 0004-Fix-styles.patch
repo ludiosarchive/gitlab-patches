@@ -1,0 +1,656 @@
+From 7ae2871718212e13aea05730edce70de00a28abc Mon Sep 17 00:00:00 2001
+From: root <root@xenialbase>
+Date: Sat, 16 Jul 2016 07:58:30 +0000
+Subject: [PATCH 4/4] Fix styles
+
+---
+ app/assets/stylesheets/framework/blocks.scss       |  2 +-
+ app/assets/stylesheets/framework/calendar.scss     |  2 +-
+ app/assets/stylesheets/framework/common.scss       |  2 ++
+ app/assets/stylesheets/framework/files.scss        |  4 +--
+ app/assets/stylesheets/framework/layout.scss       |  2 ++
+ .../stylesheets/framework/markdown_area.scss       |  2 +-
+ app/assets/stylesheets/framework/nav.scss          |  6 ++--
+ app/assets/stylesheets/framework/sidebar.scss      |  2 +-
+ app/assets/stylesheets/framework/tables.scss       |  2 +-
+ .../framework/tw_bootstrap_variables.scss          |  6 ++--
+ app/assets/stylesheets/framework/typography.scss   | 33 ++++++++++++----------
+ app/assets/stylesheets/framework/variables.scss    | 30 ++++++++++----------
+ app/assets/stylesheets/highlight/white.scss        | 18 ++++++------
+ app/assets/stylesheets/mailers/devise.scss         |  4 +--
+ .../stylesheets/mailers/repository_push_email.scss |  2 +-
+ app/assets/stylesheets/pages/commits.scss          |  2 +-
+ app/assets/stylesheets/pages/detail_page.scss      |  7 +++--
+ app/assets/stylesheets/pages/diff.scss             |  4 +--
+ app/assets/stylesheets/pages/help.scss             |  2 +-
+ app/assets/stylesheets/pages/issues.scss           |  3 +-
+ app/assets/stylesheets/pages/merge_requests.scss   |  2 +-
+ app/assets/stylesheets/pages/projects.scss         |  3 +-
+ app/assets/stylesheets/pages/stat_graph.scss       |  4 +--
+ app/assets/stylesheets/pages/todos.scss            |  2 +-
+ 24 files changed, 76 insertions(+), 70 deletions(-)
+
+diff --git a/app/assets/stylesheets/framework/blocks.scss b/app/assets/stylesheets/framework/blocks.scss
+index 7ce203d..66cb7ee 100644
+--- a/app/assets/stylesheets/framework/blocks.scss
++++ b/app/assets/stylesheets/framework/blocks.scss
+@@ -166,7 +166,7 @@
+ 
+     p {
+       padding: 0 $gl-padding;
+-      color: #5c5d5e;
++      color: #000;
+     }
+   }
+ 
+diff --git a/app/assets/stylesheets/framework/calendar.scss b/app/assets/stylesheets/framework/calendar.scss
+index 8642b75..27985a7 100644
+--- a/app/assets/stylesheets/framework/calendar.scss
++++ b/app/assets/stylesheets/framework/calendar.scss
+@@ -34,7 +34,7 @@
+ 
+ .user-contrib-text {
+   font-size: 12px;
+-  fill: #959494;
++  fill: #333;
+ }
+ 
+ .calendar-hint {
+diff --git a/app/assets/stylesheets/framework/common.scss b/app/assets/stylesheets/framework/common.scss
+index c1e5305..e4266c0 100644
+--- a/app/assets/stylesheets/framework/common.scss
++++ b/app/assets/stylesheets/framework/common.scss
+@@ -44,6 +44,8 @@
+ }
+ 
+ pre {
++  tab-size: 4;
++
+   &.clean {
+     background: none;
+     border: none;
+diff --git a/app/assets/stylesheets/framework/files.scss b/app/assets/stylesheets/framework/files.scss
+index 407f187..acef2ae 100644
+--- a/app/assets/stylesheets/framework/files.scss
++++ b/app/assets/stylesheets/framework/files.scss
+@@ -23,7 +23,7 @@
+     border-bottom: 1px solid $border-color;
+     margin: 0;
+     text-align: left;
+-    padding: 10px $gl-padding;
++    padding: 5px $gl-padding 4px $gl-padding;
+     word-wrap: break-word;
+     border-radius: 3px 3px 0 0;
+ 
+@@ -156,7 +156,7 @@
+           color: #888;
+           p {
+             margin: 0;
+-            color: #333;
++            color: #000;
+             line-height: 24px;
+             padding-left: 10px;
+           }
+diff --git a/app/assets/stylesheets/framework/layout.scss b/app/assets/stylesheets/framework/layout.scss
+index 8bb047d..8cba2ba 100644
+--- a/app/assets/stylesheets/framework/layout.scss
++++ b/app/assets/stylesheets/framework/layout.scss
+@@ -5,6 +5,8 @@ html {
+ }
+ 
+ body {
++  background-color: #e1cece;
++
+   &.navless {
+     background-color: white !important;
+   }
+diff --git a/app/assets/stylesheets/framework/markdown_area.scss b/app/assets/stylesheets/framework/markdown_area.scss
+index edea4ad..6b160ce 100644
+--- a/app/assets/stylesheets/framework/markdown_area.scss
++++ b/app/assets/stylesheets/framework/markdown_area.scss
+@@ -137,7 +137,7 @@
+ .toolbar-btn {
+   float: left;
+   padding: 0 5px;
+-  color: #959494;
++  color: #333;
+   background: transparent;
+   border: 0;
+   outline: 0;
+diff --git a/app/assets/stylesheets/framework/nav.scss b/app/assets/stylesheets/framework/nav.scss
+index 7852fc9..08fb2f0 100644
+--- a/app/assets/stylesheets/framework/nav.scss
++++ b/app/assets/stylesheets/framework/nav.scss
+@@ -54,7 +54,7 @@
+       margin-bottom: -1px;
+       font-size: 15px;
+       line-height: 28px;
+-      color: #959494;
++      color: #333;
+       border-bottom: 2px solid transparent;
+ 
+       &:hover, &:active, &:focus {
+@@ -71,7 +71,7 @@
+     .badge {
+       font-weight: normal;
+       background-color: #eee;
+-      color: #78a;
++      color: #000;
+     }
+   }
+ 
+@@ -335,7 +335,7 @@
+       }
+ 
+       .badge {
+-        color: $gl-icon-color;
++        color: #000;
+       }
+ 
+       &:hover {
+diff --git a/app/assets/stylesheets/framework/sidebar.scss b/app/assets/stylesheets/framework/sidebar.scss
+index 015fe3d..179353b 100644
+--- a/app/assets/stylesheets/framework/sidebar.scss
++++ b/app/assets/stylesheets/framework/sidebar.scss
+@@ -36,7 +36,7 @@
+   transition: padding $sidebar-transition-duration;
+ 
+   .container-fluid {
+-    background: #fff;
++    background: #fdfdfd;
+     padding: 0 $gl-padding;
+ 
+     &.container-blank {
+diff --git a/app/assets/stylesheets/framework/tables.scss b/app/assets/stylesheets/framework/tables.scss
+index b42075c..c8f39fb 100644
+--- a/app/assets/stylesheets/framework/tables.scss
++++ b/app/assets/stylesheets/framework/tables.scss
+@@ -24,7 +24,7 @@ table {
+ 
+     tr {
+       td, th {
+-        padding: 10px $gl-padding;
++        padding: 5px $gl-padding 4px $gl-padding;
+         line-height: 20px;
+         vertical-align: middle;
+       }
+diff --git a/app/assets/stylesheets/framework/tw_bootstrap_variables.scss b/app/assets/stylesheets/framework/tw_bootstrap_variables.scss
+index 371c1bf..d7fc995 100644
+--- a/app/assets/stylesheets/framework/tw_bootstrap_variables.scss
++++ b/app/assets/stylesheets/framework/tw_bootstrap_variables.scss
+@@ -132,8 +132,8 @@ $well-border:                 #eee;
+ //
+ //##
+ 
+-$code-color:                  #c7254e;
+-$code-bg:                     #f9f2f4;
++$code-color:                  #000;
++$code-bg:                     rgba(0,0,0,0.04);
+ 
+ $kbd-color:                   #fff;
+ $kbd-bg:                      #333;
+@@ -143,7 +143,7 @@ $kbd-bg:                      #333;
+ //##
+ $btn-default-color:              $gl-text-color;
+ $btn-default-bg:                 #fff;
+-$btn-default-border:             #e7e9ed;
++$btn-default-border:             #ccc;
+ 
+ //== Nav
+ //
+diff --git a/app/assets/stylesheets/framework/typography.scss b/app/assets/stylesheets/framework/typography.scss
+index 06874a9..5986e10 100644
+--- a/app/assets/stylesheets/framework/typography.scss
++++ b/app/assets/stylesheets/framework/typography.scss
+@@ -46,8 +46,8 @@
+ 
+   h1 {
+     font-size: 2em;
+-    font-weight: 600;
+-    margin: 1em 0 10px;
++    font-weight: normal;
++    margin: 1.25em 0 10px;
+     padding: 0 0 0.3em;
+     border-bottom: 1px solid $btn-default-border;
+     color: $gl-gray-dark;
+@@ -55,49 +55,53 @@
+ 
+   h2 {
+     font-size: 1.6em;
+-    font-weight: 600;
+-    margin: 1em 0 10px;
++    font-weight: normal;
++    margin: 1.25em 0 10px;
+     padding-bottom: 0.3em;
+     border-bottom: 1px solid $btn-default-border;
+     color: $gl-gray-dark;
+   }
+ 
+   h3 {
+-    margin: 1em 0 10px;
++    margin: 1.25em 0 10px;
+     font-size: 1.4em;
++    font-weight: normal;
+   }
+ 
+   h4 {
+-    margin: 1em 0 10px;
++    margin: 1.25em 0 10px;
+     font-size: 1.25em;
++    font-weight: normal;
+   }
+ 
+   h5 {
+-    margin: 1em 0 10px;
++    margin: 1.25em 0 10px;
+     font-size: 1em;
++    font-weight: normal;
+   }
+ 
+   h6 {
+-    margin: 1em 0 10px;
++    margin: 1.25em 0 10px;
+     font-size: 0.95em;
++    font-weight: normal;
+   }
+ 
+   blockquote {
+-    color: #7f8fa4;
++    color: #333;
+     font-size: inherit;
+     padding: 8px 21px;
+     margin: 12px 0;
+-    border-left: 3px solid #e7e9ed;
++    border-left: 3px solid #bbb;
+   }
+ 
+   blockquote p {
+-    color: #7f8fa4 !important;
++    color: #333 !important;
+     font-size: inherit;
+     line-height: 1.5;
+   }
+ 
+   p {
+-    color: #5c5d5e;
++    color: #000;
+     margin: 6px 0 0;
+   }
+ 
+@@ -105,7 +109,7 @@
+     @extend .table;
+     @extend .table-bordered;
+     margin: 12px 0;
+-    color: #5c5d5e;
++    color: #000;
+     th {
+       background: #f8fafc;
+     }
+@@ -113,8 +117,7 @@
+ 
+   pre {
+     margin: 12px 0;
+-    font-size: 13px;
+-    line-height: 1.6em;
++    line-height: 1.45;
+     overflow-x: auto;
+     @include border-radius(2px);
+   }
+diff --git a/app/assets/stylesheets/framework/variables.scss b/app/assets/stylesheets/framework/variables.scss
+index 5da3901..72fd229 100644
+--- a/app/assets/stylesheets/framework/variables.scss
++++ b/app/assets/stylesheets/framework/variables.scss
+@@ -14,7 +14,7 @@ $sidebar-breakpoint: 1024px;
+  */
+ $border-color:          #e5e5e5;
+ $focus-border-color:    #3aabf0;
+-$table-border-color:    #f0f0f0;
++$table-border-color:    #ddd;
+ $background-color:      #fafafa;
+ $dark-background-color: #f5f5f5;
+ $table-text-gray:       #8f8f8f;
+@@ -23,18 +23,18 @@ $table-text-gray:       #8f8f8f;
+  * Text
+  */
+ $gl-font-size:         15px;
+-$gl-title-color:       #333;
+-$gl-text-color:        #5c5c5c;
++$gl-title-color:       #000;
++$gl-text-color:        #000;
+ $gl-text-green:        #4a2;
+ $gl-text-red:          #d12f19;
+ $gl-text-orange:       #d90;
+ $gl-link-color:        #3084bb;
+-$gl-dark-link-color:   #333;
++$gl-dark-link-color:   #000;
+ $gl-placeholder-color: #8f8f8f;
+ $gl-icon-color:        $gl-placeholder-color;
+ $gl-grayish-blue:      #7f8fa4;
+ $gl-gray:              $gl-text-color;
+-$gl-gray-dark:         #313236;
++$gl-gray-dark:         #000;
+ $gl-header-color:      $gl-title-color;
+ 
+ /*
+@@ -75,7 +75,7 @@ $row-hover-border: #b2d7ff;
+ $progress-color: #c0392b;
+ $avatar_radius: 50%;
+ $header-height: 50px;
+-$fixed-layout-width: 1280px;
++$fixed-layout-width: 980px;
+ $gl-avatar-size: 40px;
+ $error-exclamation-point: #e62958;
+ $border-radius-default: 2px;
+@@ -84,7 +84,7 @@ $settings-icon-size: 18px;
+ $provider-btn-group-border: #e5e5e5;
+ $provider-btn-not-active-color: #4688f1;
+ $link-underline-blue: #4a8bee;
+-$layout-link-gray: #7e7c7c;
++$layout-link-gray: #333;
+ $todo-alert-blue: #428bca;
+ $btn-side-margin: 10px;
+ $btn-sm-side-margin: 7px;
+@@ -124,7 +124,7 @@ $red-normal: #d22852;
+ $red-dark: darken($red-normal, 5%);
+ 
+ $black: #000;
+-$black-transparent: rgba(0, 0, 0, 0.3);
++$black-transparent: rgba(0, 0, 0, 0.6);
+ 
+ $border-white-light: #f1f2f4;
+ $border-white-normal: #d6dae2;
+@@ -195,8 +195,8 @@ $line-select-yellow-dark: #f0e2bd;
+ /*
+  * Fonts
+  */
+-$monospace_font: 'Menlo', 'Liberation Mono', 'Consolas', 'DejaVu Sans Mono', 'Ubuntu Mono', 'Courier New', 'andale mono', 'lucida console', monospace;
+-$regular_font: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
++$monospace_font: monospace;
++$regular_font: -apple-system, BlinkMacSystemFont, sans-serif;
+ 
+ /*
+ * Dropdowns
+@@ -209,7 +209,7 @@ $dropdown-empty-row-bg: rgba(#000, .04);
+ $dropdown-border-color: rgba(#000, .1);
+ $dropdown-shadow-color: rgba(#000, .1);
+ $dropdown-divider-color: rgba(#000, .1);
+-$dropdown-header-color: #959494;
++$dropdown-header-color: #333;
+ $dropdown-title-btn-color: #bfbfbf;
+ $dropdown-input-color: #555;
+ $dropdown-input-focus-border: $focus-border-color;
+@@ -244,7 +244,7 @@ $award-emoji-new-btn-icon-color: #dcdcdc;
+ $search-input-border-color: rgba(#4688f1, .8);
+ $search-input-focus-shadow-color: $dropdown-input-focus-shadow;
+ $search-input-width: 244px;
+-$location-badge-color: #aaa;
++$location-badge-color: #666;
+ $location-badge-bg: $gray-normal;
+ $location-badge-active-bg: #4f91f8;
+ $location-icon-color: #e7e9ed;
+@@ -253,14 +253,14 @@ $location-icon-active-color: #807e7e;
+ /*
+  *  Notes
+  */
+-$notes-light-color: #8e8e8e;
++$notes-light-color: #333;
+ $notes-action-color: #c3c3c3;
+-$notes-role-color: #8e8e8e;
++$notes-role-color: #333;
+ $notes-role-border-color: #e4e4e4;
+ 
+ $note-disabled-comment-color: #b2b2b2;
+ $note-form-border-color: #e5e5e5;
+-$note-toolbar-color: #959494;
++$note-toolbar-color: #333;
+ 
+ $zen-control-hover-color: #111;
+ 
+diff --git a/app/assets/stylesheets/highlight/white.scss b/app/assets/stylesheets/highlight/white.scss
+index 36a80a9..efcb6c3 100644
+--- a/app/assets/stylesheets/highlight/white.scss
++++ b/app/assets/stylesheets/highlight/white.scss
+@@ -22,7 +22,7 @@
+ 
+   &, pre.code, .line_holder .line_content {
+     background-color: #fff;
+-    color: #333;
++    color: #000;
+   }
+ 
+   // Diff line
+@@ -87,19 +87,19 @@
+   }
+ 
+   .hll { background-color: #f8f8f8 }
+-  .c { color: #998; font-style: italic; }
++  .c { color: #5a5a5a; }
+   .err { color: #a61717; background-color: #e3d2d2; }
+   .k { font-weight: bold; }
+   .o { font-weight: bold; }
+-  .cm { color: #998; font-style: italic; }
+-  .cp { color: #999; font-weight: bold; }
+-  .c1 { color: #998; font-style: italic; }
+-  .cs { color: #999; font-weight: bold; font-style: italic; }
++  .cm { color: #5a5a5a; }
++  .cp { color: #5a5a5a; font-weight: bold; }
++  .c1 { color: #5a5a5a; }
++  .cs { color: #5a5a5a; font-weight: bold; font-style: italic; }
+   .gd { color: #000; background-color: #fdd; }
+   .gd .x { color: #000; background-color: #faa; }
+   .ge { font-style: italic; }
+   .gr { color: #a00; }
+-  .gh { color: #999; }
++  .gh { color: #5a5a5a; }
+   .gi { color: #000; background-color: #dfd; }
+   .gi .x { color: #000; background-color: #afa; }
+   .go { color: #888; }
+@@ -115,7 +115,7 @@
+   .kt { color: #458; font-weight: bold; }
+   .m { color: #099; }
+   .s { color: #d14; }
+-  .n { color: #333; }
++  .n { color: #000; }
+   .na { color: teal; }
+   .nb { color: #0086b3; }
+   .nc { color: #458; font-weight: bold; }
+@@ -143,7 +143,7 @@
+   .sr { color: #009926; }
+   .s1 { color: #d14; }
+   .ss { color: #990073; }
+-  .bp { color: #999; }
++  .bp { color: #5a5a5a; }
+   .vc { color: teal; }
+   .vg { color: teal; }
+   .vi { color: teal; }
+diff --git a/app/assets/stylesheets/mailers/devise.scss b/app/assets/stylesheets/mailers/devise.scss
+index 9495c5b..4ea3d20 100644
+--- a/app/assets/stylesheets/mailers/devise.scss
++++ b/app/assets/stylesheets/mailers/devise.scss
+@@ -9,9 +9,9 @@ $body-background-color:    #363636;
+ $message-background-color: #fafafa;
+ 
+ $header-color:             #6b4fbb;
+-$body-color:               #444;
++$body-color:               #000;
+ $cta-color:                #e14329;
+-$footer-link-color:        #7e7e7e;
++$footer-link-color:        #333;
+ 
+ $font-family: Helvetica, Arial, sans-serif;
+ 
+diff --git a/app/assets/stylesheets/mailers/repository_push_email.scss b/app/assets/stylesheets/mailers/repository_push_email.scss
+index 5bfe9bc..cab6a4c 100644
+--- a/app/assets/stylesheets/mailers/repository_push_email.scss
++++ b/app/assets/stylesheets/mailers/repository_push_email.scss
+@@ -107,7 +107,7 @@ span.highlight_word {
+ .kt { color: #458; font-weight: bold; }
+ .m { color: #099; }
+ .s { color: #d14; }
+-.n { color: #333; }
++.n { color: #000; }
+ .na { color: teal; }
+ .nb { color: #0086b3; }
+ .nc { color: #458; font-weight: bold; }
+diff --git a/app/assets/stylesheets/pages/commits.scss b/app/assets/stylesheets/pages/commits.scss
+index 6a58b44..9ca1567 100644
+--- a/app/assets/stylesheets/pages/commits.scss
++++ b/app/assets/stylesheets/pages/commits.scss
+@@ -195,7 +195,7 @@
+       padding-top: 6px;
+       padding-bottom: 0;
+       font-size: 12px;
+-      color: #333;
++      color: #000;
+       display: block;
+     }
+ 
+diff --git a/app/assets/stylesheets/pages/detail_page.scss b/app/assets/stylesheets/pages/detail_page.scss
+index 4d9c73c..cc0ac71 100644
+--- a/app/assets/stylesheets/pages/detail_page.scss
++++ b/app/assets/stylesheets/pages/detail_page.scss
+@@ -1,16 +1,16 @@
+ .detail-page-header {
+   padding: $gl-padding-top 0;
+   border-bottom: 1px solid $border-color;
+-  color: #5c5d5e;
++  color: #000;
+   font-size: 16px;
+   line-height: 34px;
+ 
+   .author {
+-    color: #5c5d5e;
++    color: #000;
+   }
+ 
+   .identifier {
+-    color: #5c5d5e;
++    color: #000;
+   }
+ 
+   .issue_created_ago, .author_link {
+@@ -23,6 +23,7 @@
+     margin: 0;
+     font-size: 23px;
+     color: $gl-gray-dark;
++    font-weight: normal;
+   }
+ 
+   .description {
+diff --git a/app/assets/stylesheets/pages/diff.scss b/app/assets/stylesheets/pages/diff.scss
+index 21cee2e..d0214a8 100644
+--- a/app/assets/stylesheets/pages/diff.scss
++++ b/app/assets/stylesheets/pages/diff.scss
+@@ -37,7 +37,7 @@
+     overflow: auto;
+     overflow-y: hidden;
+     background: #fff;
+-    color: #333;
++    color: #000;
+     border-radius: 0 0 3px 3px;
+     -webkit-overflow-scrolling: auto;
+ 
+@@ -338,7 +338,7 @@
+           text-decoration: none;
+         }
+         cursor: default;
+-        color: #333;
++        color: #000;
+       }
+       &.disabled {
+         display: none;
+diff --git a/app/assets/stylesheets/pages/help.scss b/app/assets/stylesheets/pages/help.scss
+index 00ab42b..b9502ab 100644
+--- a/app/assets/stylesheets/pages/help.scss
++++ b/app/assets/stylesheets/pages/help.scss
+@@ -29,7 +29,7 @@
+   th {
+     padding-top: 15px;
+     line-height: 1.5;
+-    color: #333;
++    color: #000;
+     text-align: left
+   }
+ 
+diff --git a/app/assets/stylesheets/pages/issues.scss b/app/assets/stylesheets/pages/issues.scss
+index dfe1e30..13d640a 100644
+--- a/app/assets/stylesheets/pages/issues.scss
++++ b/app/assets/stylesheets/pages/issues.scss
+@@ -1,10 +1,9 @@
+ .issues-list {
+   .issue {
+-    padding: 10px $gl-padding;
++    padding: 3px 16px 2px 16px;
+     position: relative;
+ 
+     .title {
+-      margin-bottom: 2px;
+     }
+ 
+     .issue-check {
+diff --git a/app/assets/stylesheets/pages/merge_requests.scss b/app/assets/stylesheets/pages/merge_requests.scss
+index 4bfdc4a..20dc8e9 100644
+--- a/app/assets/stylesheets/pages/merge_requests.scss
++++ b/app/assets/stylesheets/pages/merge_requests.scss
+@@ -117,7 +117,7 @@
+   }
+ 
+   .normal {
+-    color: #5c5d5e;
++    color: #000;
+   }
+ 
+   .mr-widget-body {
+diff --git a/app/assets/stylesheets/pages/projects.scss b/app/assets/stylesheets/pages/projects.scss
+index 91253ed..53592b8 100644
+--- a/app/assets/stylesheets/pages/projects.scss
++++ b/app/assets/stylesheets/pages/projects.scss
+@@ -68,7 +68,6 @@
+   padding-bottom: 24px;
+ 
+   @media (min-width: $screen-sm-min) {
+-    border-bottom: 1px solid $border-color;
+   }
+ 
+   .project-avatar {
+@@ -479,7 +478,7 @@ pre.light-well {
+   margin: 0 7px 7px;
+ 
+   h5 {
+-    color: #5c5d5e;
++    color: #000;
+   }
+ 
+   .light-well {
+diff --git a/app/assets/stylesheets/pages/stat_graph.scss b/app/assets/stylesheets/pages/stat_graph.scss
+index 69288b3..40c1397 100644
+--- a/app/assets/stylesheets/pages/stat_graph.scss
++++ b/app/assets/stylesheets/pages/stat_graph.scss
+@@ -54,9 +54,9 @@
+ }
+ 
+ .selection rect {
+-  fill: #333;
++  fill: #000;
+   fill-opacity: 0.1;
+-  stroke: #333;
++  stroke: #000;
+   stroke-width: 1px;
+   stroke-opacity: 0.4;
+   shape-rendering: crispedges;
+diff --git a/app/assets/stylesheets/pages/todos.scss b/app/assets/stylesheets/pages/todos.scss
+index cf16d07..9eb218e 100644
+--- a/app/assets/stylesheets/pages/todos.scss
++++ b/app/assets/stylesheets/pages/todos.scss
+@@ -58,7 +58,7 @@
+         }
+ 
+         p {
+-          color: #5c5d5e;
++          color: #000;
+         }
+       }
+ 
+-- 
+2.7.4
+
