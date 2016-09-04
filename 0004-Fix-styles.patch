@@ -1,4 +1,4 @@
-From e35032073668b9d8f25046723c9d3b582d50cfc4 Mon Sep 17 00:00:00 2001
+From 4d61c459fa0daea29043814074a192338bb7e1b9 Mon Sep 17 00:00:00 2001
 From: root <root@xenialbase>
 Date: Sat, 16 Jul 2016 07:58:30 +0000
 Subject: [PATCH 4/4] Fix styles
@@ -8,6 +8,7 @@ Subject: [PATCH 4/4] Fix styles
  app/assets/stylesheets/framework/calendar.scss     |  2 +-
  app/assets/stylesheets/framework/common.scss       |  2 ++
  app/assets/stylesheets/framework/files.scss        |  5 ++-
+ app/assets/stylesheets/framework/gitlab-theme.scss |  4 +--
  app/assets/stylesheets/framework/layout.scss       |  2 ++
  .../stylesheets/framework/markdown_area.scss       |  2 +-
  app/assets/stylesheets/framework/nav.scss          |  6 ++--
@@ -29,7 +30,7 @@ Subject: [PATCH 4/4] Fix styles
  app/assets/stylesheets/pages/projects.scss         |  9 +++---
  app/assets/stylesheets/pages/stat_graph.scss       |  4 +--
  app/assets/stylesheets/pages/todos.scss            |  2 +-
- 25 files changed, 84 insertions(+), 78 deletions(-)
+ 26 files changed, 86 insertions(+), 80 deletions(-)
 
 diff --git a/app/assets/stylesheets/framework/blocks.scss b/app/assets/stylesheets/framework/blocks.scss
 index 7ce203d..66cb7ee 100644
@@ -100,6 +101,28 @@ index 407f187..d06e370 100644
              line-height: 24px;
              padding-left: 10px;
            }
+diff --git a/app/assets/stylesheets/framework/gitlab-theme.scss b/app/assets/stylesheets/framework/gitlab-theme.scss
+index 3673b81..c2f4d7a 100644
+--- a/app/assets/stylesheets/framework/gitlab-theme.scss
++++ b/app/assets/stylesheets/framework/gitlab-theme.scss
+@@ -79,7 +79,7 @@ $theme-charcoal-dark: #383f45;
+ $theme-charcoal-text: #b9bbbe;
+ 
+ $theme-blue: #2980b9;
+-$theme-graphite: #666;
++$theme-graphite: #777;
+ $theme-gray: #373737;
+ $theme-green: #019875;
+ $theme-violet: #548;
+@@ -94,7 +94,7 @@ body {
+   }
+ 
+   &.ui_graphite {
+-    @include gitlab-theme(#ccc, #777, $theme-graphite, #555);
++    @include gitlab-theme(#e8e8e8, #777, $theme-graphite, #555);
+   }
+ 
+   &.ui_gray {
 diff --git a/app/assets/stylesheets/framework/layout.scss b/app/assets/stylesheets/framework/layout.scss
 index 8bb047d..8cba2ba 100644
 --- a/app/assets/stylesheets/framework/layout.scss
