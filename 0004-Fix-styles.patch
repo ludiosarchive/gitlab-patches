@@ -1,4 +1,4 @@
-From d65c1d57c48da8a5c3b36a06232488f4f31d4e61 Mon Sep 17 00:00:00 2001
+From e35032073668b9d8f25046723c9d3b582d50cfc4 Mon Sep 17 00:00:00 2001
 From: root <root@xenialbase>
 Date: Sat, 16 Jul 2016 07:58:30 +0000
 Subject: [PATCH 4/4] Fix styles
@@ -11,11 +11,12 @@ Subject: [PATCH 4/4] Fix styles
  app/assets/stylesheets/framework/layout.scss       |  2 ++
  .../stylesheets/framework/markdown_area.scss       |  2 +-
  app/assets/stylesheets/framework/nav.scss          |  6 ++--
+ app/assets/stylesheets/framework/selects.scss      |  2 +-
  app/assets/stylesheets/framework/sidebar.scss      |  2 +-
  app/assets/stylesheets/framework/tables.scss       |  2 +-
  .../framework/tw_bootstrap_variables.scss          |  6 ++--
  app/assets/stylesheets/framework/typography.scss   | 36 ++++++++++++----------
- app/assets/stylesheets/framework/variables.scss    | 30 +++++++++---------
+ app/assets/stylesheets/framework/variables.scss    | 32 +++++++++----------
  app/assets/stylesheets/highlight/white.scss        | 20 ++++++------
  app/assets/stylesheets/mailers/devise.scss         |  4 +--
  .../stylesheets/mailers/repository_push_email.scss |  2 +-
@@ -28,7 +29,7 @@ Subject: [PATCH 4/4] Fix styles
  app/assets/stylesheets/pages/projects.scss         |  9 +++---
  app/assets/stylesheets/pages/stat_graph.scss       |  4 +--
  app/assets/stylesheets/pages/todos.scss            |  2 +-
- 24 files changed, 82 insertions(+), 76 deletions(-)
+ 25 files changed, 84 insertions(+), 78 deletions(-)
 
 diff --git a/app/assets/stylesheets/framework/blocks.scss b/app/assets/stylesheets/framework/blocks.scss
 index 7ce203d..66cb7ee 100644
@@ -156,6 +157,19 @@ index 7852fc9..08fb2f0 100644
        }
  
        &:hover {
+diff --git a/app/assets/stylesheets/framework/selects.scss b/app/assets/stylesheets/framework/selects.scss
+index 21d87cc..04e4793 100644
+--- a/app/assets/stylesheets/framework/selects.scss
++++ b/app/assets/stylesheets/framework/selects.scss
+@@ -54,7 +54,7 @@
+ }
+ 
+ .select2-highlighted {
+-  background: #3084bb !important;
++  background: #4078c0 !important;
+ }
+ 
+ .select2-results li.select2-result-with-children > .select2-result-label {
 diff --git a/app/assets/stylesheets/framework/sidebar.scss b/app/assets/stylesheets/framework/sidebar.scss
 index 015fe3d..179353b 100644
 --- a/app/assets/stylesheets/framework/sidebar.scss
@@ -307,7 +321,7 @@ index 06874a9..b5390b1 100644
      @include border-radius(2px);
    }
 diff --git a/app/assets/stylesheets/framework/variables.scss b/app/assets/stylesheets/framework/variables.scss
-index 5da3901..72fd229 100644
+index 5da3901..0fb8cbd 100644
 --- a/app/assets/stylesheets/framework/variables.scss
 +++ b/app/assets/stylesheets/framework/variables.scss
 @@ -14,7 +14,7 @@ $sidebar-breakpoint: 1024px;
@@ -315,7 +329,7 @@ index 5da3901..72fd229 100644
  $border-color:          #e5e5e5;
  $focus-border-color:    #3aabf0;
 -$table-border-color:    #f0f0f0;
-+$table-border-color:    #ddd;
++$table-border-color:    #eee;
  $background-color:      #fafafa;
  $dark-background-color: #f5f5f5;
  $table-text-gray:       #8f8f8f;
@@ -330,8 +344,9 @@ index 5da3901..72fd229 100644
  $gl-text-green:        #4a2;
  $gl-text-red:          #d12f19;
  $gl-text-orange:       #d90;
- $gl-link-color:        #3084bb;
+-$gl-link-color:        #3084bb;
 -$gl-dark-link-color:   #333;
++$gl-link-color:        #4078c0;
 +$gl-dark-link-color:   #000;
  $gl-placeholder-color: #8f8f8f;
  $gl-icon-color:        $gl-placeholder-color;
