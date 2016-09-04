@@ -1,4 +1,4 @@
-From 63cce793fef899fd505d1e4fa0d3ce2c8c6eadd5 Mon Sep 17 00:00:00 2001
+From ad4334b1b6cce63aa6af35e29847e88838ebd9be Mon Sep 17 00:00:00 2001
 From: root <root@xenialbase>
 Date: Sat, 16 Jul 2016 07:58:30 +0000
 Subject: [PATCH 4/4] Fix styles
@@ -16,7 +16,7 @@ Subject: [PATCH 4/4] Fix styles
  .../framework/tw_bootstrap_variables.scss          |  6 ++--
  app/assets/stylesheets/framework/typography.scss   | 33 ++++++++++++----------
  app/assets/stylesheets/framework/variables.scss    | 30 ++++++++++----------
- app/assets/stylesheets/highlight/white.scss        | 18 ++++++------
+ app/assets/stylesheets/highlight/white.scss        | 20 ++++++-------
  app/assets/stylesheets/mailers/devise.scss         |  4 +--
  .../stylesheets/mailers/repository_push_email.scss |  2 +-
  app/assets/stylesheets/pages/commits.scss          |  2 +-
@@ -28,7 +28,7 @@ Subject: [PATCH 4/4] Fix styles
  app/assets/stylesheets/pages/projects.scss         |  9 +++---
  app/assets/stylesheets/pages/stat_graph.scss       |  4 +--
  app/assets/stylesheets/pages/todos.scss            |  2 +-
- 24 files changed, 79 insertions(+), 74 deletions(-)
+ 24 files changed, 80 insertions(+), 75 deletions(-)
 
 diff --git a/app/assets/stylesheets/framework/blocks.scss b/app/assets/stylesheets/framework/blocks.scss
 index 7ce203d..66cb7ee 100644
@@ -415,14 +415,16 @@ index 5da3901..72fd229 100644
  $zen-control-hover-color: #111;
  
 diff --git a/app/assets/stylesheets/highlight/white.scss b/app/assets/stylesheets/highlight/white.scss
-index 36a80a9..efcb6c3 100644
+index 36a80a9..72aec14 100644
 --- a/app/assets/stylesheets/highlight/white.scss
 +++ b/app/assets/stylesheets/highlight/white.scss
-@@ -22,7 +22,7 @@
+@@ -21,8 +21,8 @@
+   }
  
    &, pre.code, .line_holder .line_content {
-     background-color: #fff;
+-    background-color: #fff;
 -    color: #333;
++    background-color: #f7f7f7;
 +    color: #000;
    }
  
