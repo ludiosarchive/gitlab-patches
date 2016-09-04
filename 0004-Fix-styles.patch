@@ -1,4 +1,4 @@
-From e581f3d93a765cf208b8118f67940917785a8f71 Mon Sep 17 00:00:00 2001
+From 63cce793fef899fd505d1e4fa0d3ce2c8c6eadd5 Mon Sep 17 00:00:00 2001
 From: root <root@xenialbase>
 Date: Sat, 16 Jul 2016 07:58:30 +0000
 Subject: [PATCH 4/4] Fix styles
@@ -7,11 +7,11 @@ Subject: [PATCH 4/4] Fix styles
  app/assets/stylesheets/framework/blocks.scss       |  2 +-
  app/assets/stylesheets/framework/calendar.scss     |  2 +-
  app/assets/stylesheets/framework/common.scss       |  2 ++
- app/assets/stylesheets/framework/files.scss        |  4 +--
+ app/assets/stylesheets/framework/files.scss        |  5 ++--
  app/assets/stylesheets/framework/layout.scss       |  2 ++
  .../stylesheets/framework/markdown_area.scss       |  2 +-
  app/assets/stylesheets/framework/nav.scss          |  6 ++--
- app/assets/stylesheets/framework/sidebar.scss      |  4 +--
+ app/assets/stylesheets/framework/sidebar.scss      |  2 +-
  app/assets/stylesheets/framework/tables.scss       |  2 +-
  .../framework/tw_bootstrap_variables.scss          |  6 ++--
  app/assets/stylesheets/framework/typography.scss   | 33 ++++++++++++----------
@@ -25,10 +25,10 @@ Subject: [PATCH 4/4] Fix styles
  app/assets/stylesheets/pages/help.scss             |  2 +-
  app/assets/stylesheets/pages/issues.scss           |  3 +-
  app/assets/stylesheets/pages/merge_requests.scss   |  2 +-
- app/assets/stylesheets/pages/projects.scss         |  5 +---
+ app/assets/stylesheets/pages/projects.scss         |  9 +++---
  app/assets/stylesheets/pages/stat_graph.scss       |  4 +--
  app/assets/stylesheets/pages/todos.scss            |  2 +-
- 24 files changed, 77 insertions(+), 73 deletions(-)
+ 24 files changed, 79 insertions(+), 74 deletions(-)
 
 diff --git a/app/assets/stylesheets/framework/blocks.scss b/app/assets/stylesheets/framework/blocks.scss
 index 7ce203d..66cb7ee 100644
@@ -70,7 +70,7 @@ index c1e5305..e4266c0 100644
      background: none;
      border: none;
 diff --git a/app/assets/stylesheets/framework/files.scss b/app/assets/stylesheets/framework/files.scss
-index 407f187..acef2ae 100644
+index 407f187..d06e370 100644
 --- a/app/assets/stylesheets/framework/files.scss
 +++ b/app/assets/stylesheets/framework/files.scss
 @@ -23,7 +23,7 @@
@@ -82,7 +82,15 @@ index 407f187..acef2ae 100644
      word-wrap: break-word;
      border-radius: 3px 3px 0 0;
  
-@@ -156,7 +156,7 @@
+@@ -45,7 +45,6 @@
+       .btn {
+         padding: 0 10px;
+         font-size: 13px;
+-        line-height: 28px;
+       }
+     }
+ 
+@@ -156,7 +155,7 @@
            color: #888;
            p {
              margin: 0;
@@ -149,20 +157,18 @@ index 7852fc9..08fb2f0 100644
  
        &:hover {
 diff --git a/app/assets/stylesheets/framework/sidebar.scss b/app/assets/stylesheets/framework/sidebar.scss
-index 015fe3d..b001218 100644
+index 015fe3d..179353b 100644
 --- a/app/assets/stylesheets/framework/sidebar.scss
 +++ b/app/assets/stylesheets/framework/sidebar.scss
-@@ -36,8 +36,8 @@
+@@ -36,7 +36,7 @@
    transition: padding $sidebar-transition-duration;
  
    .container-fluid {
 -    background: #fff;
--    padding: 0 $gl-padding;
 +    background: #fdfdfd;
-+    padding: $gl-padding;
+     padding: 0 $gl-padding;
  
      &.container-blank {
-       background: none;
 diff --git a/app/assets/stylesheets/framework/tables.scss b/app/assets/stylesheets/framework/tables.scss
 index b42075c..c8f39fb 100644
 --- a/app/assets/stylesheets/framework/tables.scss
@@ -604,10 +610,10 @@ index 4bfdc4a..20dc8e9 100644
  
    .mr-widget-body {
 diff --git a/app/assets/stylesheets/pages/projects.scss b/app/assets/stylesheets/pages/projects.scss
-index 91253ed..52c19db 100644
+index 91253ed..a0efd3a 100644
 --- a/app/assets/stylesheets/pages/projects.scss
 +++ b/app/assets/stylesheets/pages/projects.scss
-@@ -65,10 +65,8 @@
+@@ -65,14 +65,13 @@
  
  .project-home-panel {
    padding-top: 24px;
@@ -618,15 +624,23 @@ index 91253ed..52c19db 100644
    }
  
    .project-avatar {
-@@ -421,7 +419,6 @@ a.deploy-project-label {
+     float: none;
++    margin-top: $gl-padding;
+     margin-left: auto;
+     margin-right: auto;
+ 
+@@ -420,8 +419,8 @@ a.deploy-project-label {
+   border-bottom: 1px solid $border-color;
  
    .nav {
-     padding-top: 12px;
+-    padding-top: 12px;
 -    padding-bottom: 12px;
++    padding-top: $gl-padding;
++    padding-bottom: $gl-padding;
    }
  
    .nav > li {
-@@ -479,7 +476,7 @@ pre.light-well {
+@@ -479,7 +478,7 @@ pre.light-well {
    margin: 0 7px 7px;
  
    h5 {
