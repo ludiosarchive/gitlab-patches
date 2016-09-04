@@ -1,4 +1,4 @@
-From ad4334b1b6cce63aa6af35e29847e88838ebd9be Mon Sep 17 00:00:00 2001
+From d65c1d57c48da8a5c3b36a06232488f4f31d4e61 Mon Sep 17 00:00:00 2001
 From: root <root@xenialbase>
 Date: Sat, 16 Jul 2016 07:58:30 +0000
 Subject: [PATCH 4/4] Fix styles
@@ -7,16 +7,16 @@ Subject: [PATCH 4/4] Fix styles
  app/assets/stylesheets/framework/blocks.scss       |  2 +-
  app/assets/stylesheets/framework/calendar.scss     |  2 +-
  app/assets/stylesheets/framework/common.scss       |  2 ++
- app/assets/stylesheets/framework/files.scss        |  5 ++--
+ app/assets/stylesheets/framework/files.scss        |  5 ++-
  app/assets/stylesheets/framework/layout.scss       |  2 ++
  .../stylesheets/framework/markdown_area.scss       |  2 +-
  app/assets/stylesheets/framework/nav.scss          |  6 ++--
  app/assets/stylesheets/framework/sidebar.scss      |  2 +-
  app/assets/stylesheets/framework/tables.scss       |  2 +-
  .../framework/tw_bootstrap_variables.scss          |  6 ++--
- app/assets/stylesheets/framework/typography.scss   | 33 ++++++++++++----------
- app/assets/stylesheets/framework/variables.scss    | 30 ++++++++++----------
- app/assets/stylesheets/highlight/white.scss        | 20 ++++++-------
+ app/assets/stylesheets/framework/typography.scss   | 36 ++++++++++++----------
+ app/assets/stylesheets/framework/variables.scss    | 30 +++++++++---------
+ app/assets/stylesheets/highlight/white.scss        | 20 ++++++------
  app/assets/stylesheets/mailers/devise.scss         |  4 +--
  .../stylesheets/mailers/repository_push_email.scss |  2 +-
  app/assets/stylesheets/pages/commits.scss          |  2 +-
@@ -28,7 +28,7 @@ Subject: [PATCH 4/4] Fix styles
  app/assets/stylesheets/pages/projects.scss         |  9 +++---
  app/assets/stylesheets/pages/stat_graph.scss       |  4 +--
  app/assets/stylesheets/pages/todos.scss            |  2 +-
- 24 files changed, 80 insertions(+), 75 deletions(-)
+ 24 files changed, 82 insertions(+), 76 deletions(-)
 
 diff --git a/app/assets/stylesheets/framework/blocks.scss b/app/assets/stylesheets/framework/blocks.scss
 index 7ce203d..66cb7ee 100644
@@ -207,7 +207,7 @@ index 371c1bf..d7fc995 100644
  //== Nav
  //
 diff --git a/app/assets/stylesheets/framework/typography.scss b/app/assets/stylesheets/framework/typography.scss
-index 06874a9..5986e10 100644
+index 06874a9..b5390b1 100644
 --- a/app/assets/stylesheets/framework/typography.scss
 +++ b/app/assets/stylesheets/framework/typography.scss
 @@ -46,8 +46,8 @@
@@ -221,7 +221,7 @@ index 06874a9..5986e10 100644
      padding: 0 0 0.3em;
      border-bottom: 1px solid $btn-default-border;
      color: $gl-gray-dark;
-@@ -55,49 +55,53 @@
+@@ -55,57 +55,62 @@
  
    h2 {
      font-size: 1.6em;
@@ -281,11 +281,13 @@ index 06874a9..5986e10 100644
  
    p {
 -    color: #5c5d5e;
+-    margin: 6px 0 0;
 +    color: #000;
-     margin: 6px 0 0;
++    margin: 12px 0 0;
++    line-height: 1.5;
    }
  
-@@ -105,7 +109,7 @@
+   table {
      @extend .table;
      @extend .table-bordered;
      margin: 12px 0;
@@ -294,7 +296,7 @@ index 06874a9..5986e10 100644
      th {
        background: #f8fafc;
      }
-@@ -113,8 +117,7 @@
+@@ -113,8 +118,7 @@
  
    pre {
      margin: 12px 0;
