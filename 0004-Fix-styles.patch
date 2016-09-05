@@ -1,23 +1,23 @@
-From 4d61c459fa0daea29043814074a192338bb7e1b9 Mon Sep 17 00:00:00 2001
+From ad794c64cddd18a7dbccb9c1a0072a3d5c7e6728 Mon Sep 17 00:00:00 2001
 From: root <root@xenialbase>
 Date: Sat, 16 Jul 2016 07:58:30 +0000
 Subject: [PATCH 4/4] Fix styles
 
 ---
- app/assets/stylesheets/framework/blocks.scss       |  2 +-
+ app/assets/stylesheets/framework/blocks.scss       |  6 +---
  app/assets/stylesheets/framework/calendar.scss     |  2 +-
  app/assets/stylesheets/framework/common.scss       |  2 ++
  app/assets/stylesheets/framework/files.scss        |  5 ++-
  app/assets/stylesheets/framework/gitlab-theme.scss |  4 +--
- app/assets/stylesheets/framework/layout.scss       |  2 ++
+ app/assets/stylesheets/framework/layout.scss       |  3 ++
  .../stylesheets/framework/markdown_area.scss       |  2 +-
- app/assets/stylesheets/framework/nav.scss          |  6 ++--
+ app/assets/stylesheets/framework/nav.scss          |  8 ++---
  app/assets/stylesheets/framework/selects.scss      |  2 +-
  app/assets/stylesheets/framework/sidebar.scss      |  2 +-
  app/assets/stylesheets/framework/tables.scss       |  2 +-
  .../framework/tw_bootstrap_variables.scss          |  6 ++--
  app/assets/stylesheets/framework/typography.scss   | 36 ++++++++++++----------
- app/assets/stylesheets/framework/variables.scss    | 32 +++++++++----------
+ app/assets/stylesheets/framework/variables.scss    | 33 ++++++++++----------
  app/assets/stylesheets/highlight/white.scss        | 20 ++++++------
  app/assets/stylesheets/mailers/devise.scss         |  4 +--
  .../stylesheets/mailers/repository_push_email.scss |  2 +-
@@ -30,13 +30,30 @@ Subject: [PATCH 4/4] Fix styles
  app/assets/stylesheets/pages/projects.scss         |  9 +++---
  app/assets/stylesheets/pages/stat_graph.scss       |  4 +--
  app/assets/stylesheets/pages/todos.scss            |  2 +-
- 26 files changed, 86 insertions(+), 80 deletions(-)
+ app/assets/stylesheets/pages/tree.scss             |  2 +-
+ 27 files changed, 90 insertions(+), 86 deletions(-)
 
 diff --git a/app/assets/stylesheets/framework/blocks.scss b/app/assets/stylesheets/framework/blocks.scss
-index 7ce203d..66cb7ee 100644
+index 7ce203d..3371673 100644
 --- a/app/assets/stylesheets/framework/blocks.scss
 +++ b/app/assets/stylesheets/framework/blocks.scss
-@@ -166,7 +166,7 @@
+@@ -124,7 +124,6 @@
+ 
+ .cover-block {
+   text-align: center;
+-  background: $background-color;
+   padding-top: 44px;
+   position: relative;
+ 
+@@ -147,7 +146,6 @@
+     font-size: 24px;
+     font-weight: normal;
+     margin-bottom: 10px;
+-    color: #4c4e54;
+     font-size: 23px;
+     line-height: 1.1;
+ 
+@@ -166,7 +164,7 @@
  
      p {
        padding: 0 $gl-padding;
@@ -44,6 +61,15 @@ index 7ce203d..66cb7ee 100644
 +      color: #000;
      }
    }
+ 
+@@ -190,8 +188,6 @@
+   }
+ 
+   &.groups-cover-block {
+-    background: $white-light;
+-    border-bottom: 1px solid $border-color;
+     text-align: left;
+     padding: 24px 0;
  
 diff --git a/app/assets/stylesheets/framework/calendar.scss b/app/assets/stylesheets/framework/calendar.scss
 index 8642b75..27985a7 100644
@@ -124,7 +150,7 @@ index 3673b81..c2f4d7a 100644
  
    &.ui_gray {
 diff --git a/app/assets/stylesheets/framework/layout.scss b/app/assets/stylesheets/framework/layout.scss
-index 8bb047d..8cba2ba 100644
+index 8bb047d..84cec18 100644
 --- a/app/assets/stylesheets/framework/layout.scss
 +++ b/app/assets/stylesheets/framework/layout.scss
 @@ -5,6 +5,8 @@ html {
@@ -136,6 +162,12 @@ index 8bb047d..8cba2ba 100644
    &.navless {
      background-color: white !important;
    }
+@@ -26,4 +28,5 @@ body {
+ 
+ .container-limited {
+   max-width: $fixed-layout-width;
++  box-shadow: $shadow;
+ }
 diff --git a/app/assets/stylesheets/framework/markdown_area.scss b/app/assets/stylesheets/framework/markdown_area.scss
 index edea4ad..6b160ce 100644
 --- a/app/assets/stylesheets/framework/markdown_area.scss
@@ -150,10 +182,18 @@ index edea4ad..6b160ce 100644
    border: 0;
    outline: 0;
 diff --git a/app/assets/stylesheets/framework/nav.scss b/app/assets/stylesheets/framework/nav.scss
-index 7852fc9..08fb2f0 100644
+index 7852fc9..84d0a5d 100644
 --- a/app/assets/stylesheets/framework/nav.scss
 +++ b/app/assets/stylesheets/framework/nav.scss
-@@ -54,7 +54,7 @@
+@@ -42,7 +42,6 @@
+   margin: 0;
+   list-style: none;
+   height: auto;
+-  border-bottom: 1px solid $border-color;
+ 
+   li {
+     display: inline-block;
+@@ -54,7 +53,7 @@
        margin-bottom: -1px;
        font-size: 15px;
        line-height: 28px;
@@ -162,7 +202,7 @@ index 7852fc9..08fb2f0 100644
        border-bottom: 2px solid transparent;
  
        &:hover, &:active, &:focus {
-@@ -71,7 +71,7 @@
+@@ -71,7 +70,7 @@
      .badge {
        font-weight: normal;
        background-color: #eee;
@@ -171,6 +211,14 @@ index 7852fc9..08fb2f0 100644
      }
    }
  
+@@ -270,6 +269,7 @@
+ 
+   .container-fluid {
+     position: relative;
++    box-shadow: $shadow;
+   }
+ 
+   .controls {
 @@ -335,7 +335,7 @@
        }
  
@@ -344,10 +392,10 @@ index 06874a9..b5390b1 100644
      @include border-radius(2px);
    }
 diff --git a/app/assets/stylesheets/framework/variables.scss b/app/assets/stylesheets/framework/variables.scss
-index 5da3901..0fb8cbd 100644
+index 5da3901..035ba04 100644
 --- a/app/assets/stylesheets/framework/variables.scss
 +++ b/app/assets/stylesheets/framework/variables.scss
-@@ -14,7 +14,7 @@ $sidebar-breakpoint: 1024px;
+@@ -14,27 +14,28 @@ $sidebar-breakpoint: 1024px;
   */
  $border-color:          #e5e5e5;
  $focus-border-color:    #3aabf0;
@@ -356,7 +404,9 @@ index 5da3901..0fb8cbd 100644
  $background-color:      #fafafa;
  $dark-background-color: #f5f5f5;
  $table-text-gray:       #8f8f8f;
-@@ -23,18 +23,18 @@ $table-text-gray:       #8f8f8f;
++$shadow:                2px 2px 5px rgba(0, 0, 0, 0.3);
+ 
+ /*
   * Text
   */
  $gl-font-size:         15px;
@@ -380,7 +430,7 @@ index 5da3901..0fb8cbd 100644
  $gl-header-color:      $gl-title-color;
  
  /*
-@@ -75,7 +75,7 @@ $row-hover-border: #b2d7ff;
+@@ -75,7 +76,7 @@ $row-hover-border: #b2d7ff;
  $progress-color: #c0392b;
  $avatar_radius: 50%;
  $header-height: 50px;
@@ -389,7 +439,7 @@ index 5da3901..0fb8cbd 100644
  $gl-avatar-size: 40px;
  $error-exclamation-point: #e62958;
  $border-radius-default: 2px;
-@@ -84,7 +84,7 @@ $settings-icon-size: 18px;
+@@ -84,7 +85,7 @@ $settings-icon-size: 18px;
  $provider-btn-group-border: #e5e5e5;
  $provider-btn-not-active-color: #4688f1;
  $link-underline-blue: #4a8bee;
@@ -398,7 +448,7 @@ index 5da3901..0fb8cbd 100644
  $todo-alert-blue: #428bca;
  $btn-side-margin: 10px;
  $btn-sm-side-margin: 7px;
-@@ -124,7 +124,7 @@ $red-normal: #d22852;
+@@ -124,7 +125,7 @@ $red-normal: #d22852;
  $red-dark: darken($red-normal, 5%);
  
  $black: #000;
@@ -407,7 +457,7 @@ index 5da3901..0fb8cbd 100644
  
  $border-white-light: #f1f2f4;
  $border-white-normal: #d6dae2;
-@@ -195,8 +195,8 @@ $line-select-yellow-dark: #f0e2bd;
+@@ -195,8 +196,8 @@ $line-select-yellow-dark: #f0e2bd;
  /*
   * Fonts
   */
@@ -418,7 +468,7 @@ index 5da3901..0fb8cbd 100644
  
  /*
  * Dropdowns
-@@ -209,7 +209,7 @@ $dropdown-empty-row-bg: rgba(#000, .04);
+@@ -209,7 +210,7 @@ $dropdown-empty-row-bg: rgba(#000, .04);
  $dropdown-border-color: rgba(#000, .1);
  $dropdown-shadow-color: rgba(#000, .1);
  $dropdown-divider-color: rgba(#000, .1);
@@ -427,7 +477,7 @@ index 5da3901..0fb8cbd 100644
  $dropdown-title-btn-color: #bfbfbf;
  $dropdown-input-color: #555;
  $dropdown-input-focus-border: $focus-border-color;
-@@ -244,7 +244,7 @@ $award-emoji-new-btn-icon-color: #dcdcdc;
+@@ -244,7 +245,7 @@ $award-emoji-new-btn-icon-color: #dcdcdc;
  $search-input-border-color: rgba(#4688f1, .8);
  $search-input-focus-shadow-color: $dropdown-input-focus-shadow;
  $search-input-width: 244px;
@@ -436,7 +486,7 @@ index 5da3901..0fb8cbd 100644
  $location-badge-bg: $gray-normal;
  $location-badge-active-bg: #4f91f8;
  $location-icon-color: #e7e9ed;
-@@ -253,14 +253,14 @@ $location-icon-active-color: #807e7e;
+@@ -253,14 +254,14 @@ $location-icon-active-color: #807e7e;
  /*
   *  Notes
   */
@@ -719,6 +769,19 @@ index cf16d07..9eb218e 100644
 +          color: #000;
          }
        }
+ 
+diff --git a/app/assets/stylesheets/pages/tree.scss b/app/assets/stylesheets/pages/tree.scss
+index 9da40fe..a99be6f 100644
+--- a/app/assets/stylesheets/pages/tree.scss
++++ b/app/assets/stylesheets/pages/tree.scss
+@@ -65,7 +65,7 @@
+     }
+ 
+     .tree_time_ago {
+-      min-width: 135px;
++      min-width: 160px;
+     }
+   }
  
 -- 
 2.7.4
