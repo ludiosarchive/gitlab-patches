@@ -1,21 +1,23 @@
-From 9c00e1a17ee336fc1e5c028635b3cedf85798ead Mon Sep 17 00:00:00 2001
-From: root <root@xenialbase>
-Date: Sat, 27 Aug 2016 00:58:01 +0000
-Subject: [PATCH 3/4] Remove nicescroll to fix 100% CPU use:
+From 65eb693e88bdf8cf42d6e439a43d249fa1504f65 Mon Sep 17 00:00:00 2001
+From: Your Name <you@example.com>
+Date: Fri, 27 Jan 2017 07:34:52 +0000
+Subject: [PATCH 3/3] Remove nicescroll to fix 100% CPU use:
  https://gitlab.com/gitlab-org/gitlab-ce/issues/342#note_2473360
 
 ---
- app/assets/javascripts/application.js      | 6 ------
- app/assets/javascripts/build.js            | 1 -
- app/assets/javascripts/issuable_context.js | 1 -
- app/assets/javascripts/sidebar.js          | 5 -----
- 4 files changed, 13 deletions(-)
+ app/assets/javascripts/application.js         | 6 ------
+ app/assets/javascripts/build.js               | 1 -
+ app/assets/javascripts/build_variables.js.es6 | 2 +-
+ app/assets/javascripts/issuable_context.js    | 1 -
+ app/assets/javascripts/sidebar.js.es6         | 4 ----
+ app/assets/javascripts/wikis.js.es6           | 2 --
+ 6 files changed, 1 insertion(+), 15 deletions(-)
 
 diff --git a/app/assets/javascripts/application.js b/app/assets/javascripts/application.js
-index ce9cbb6..c0d55f5 100644
+index f061548..5ca3ac0 100644
 --- a/app/assets/javascripts/application.js
 +++ b/app/assets/javascripts/application.js
-@@ -35,7 +35,6 @@
+@@ -49,7 +49,6 @@
  /*= require shortcuts_dashboard_navigation */
  /*= require shortcuts_issuable */
  /*= require shortcuts_network */
@@ -23,35 +25,48 @@ index ce9cbb6..c0d55f5 100644
  /*= require date.format */
  /*= require_directory ./behaviors */
  /*= require_directory ./blob */
-@@ -140,11 +139,6 @@
-     $body = $('body');
-     gl.utils.preventDisabledButtons();
-     bootstrapBreakpoint = bp.getBreakpointSize();
--    $(".nav-sidebar").niceScroll({
+@@ -107,11 +106,6 @@
+       }
+     });
+ 
+-    $('.nav-sidebar').niceScroll({
 -      cursoropacitymax: '0.4',
 -      cursorcolor: '#FFF',
--      cursorborder: "1px solid #FFF"
+-      cursorborder: '1px solid #FFF'
 -    });
-     $(".js-select-on-focus").on("focusin", function() {
-       return $(this).select().one('mouseup', function(e) {
+     $('.js-select-on-focus').on('focusin', function () {
+       return $(this).select().one('mouseup', function (e) {
          return e.preventDefault();
 diff --git a/app/assets/javascripts/build.js b/app/assets/javascripts/build.js
-index 0d7d29b..4964ce1 100644
+index fca4700..20aee8f 100644
 --- a/app/assets/javascripts/build.js
 +++ b/app/assets/javascripts/build.js
-@@ -17,7 +17,6 @@
-       this.updateDropdown = bind(this.updateDropdown, this);
-       clearInterval(Build.interval);
-       this.bp = Breakpoints.get();
--      $('.js-build-sidebar').niceScroll();
+@@ -75,7 +75,6 @@
+       this.$sidebar.css({
+         top: this.sidebarTranslationLimits.max
+       });
+-      this.$sidebar.niceScroll();
+       this.$document.off('click', '.js-sidebar-build-toggle').on('click', '.js-sidebar-build-toggle', this.toggleSidebar);
+       this.$document.off('scroll.translateSidebar').on('scroll.translateSidebar', this.translateSidebar.bind(this));
+     };
+diff --git a/app/assets/javascripts/build_variables.js.es6 b/app/assets/javascripts/build_variables.js.es6
+index 993424d..488ce74 100644
+--- a/app/assets/javascripts/build_variables.js.es6
++++ b/app/assets/javascripts/build_variables.js.es6
+@@ -2,7 +2,7 @@
  
-       this.populateJobs(this.build_stage);
-       this.updateStageDropdownText(this.build_stage);
+ $(function(){
+   $('.reveal-variables').off('click').on('click',function(){
+-    $('.js-build').toggle().niceScroll();
++    $('.js-build').toggle();
+     $(this).hide();
+   });
+ });
 diff --git a/app/assets/javascripts/issuable_context.js b/app/assets/javascripts/issuable_context.js
-index 8147e83..bf148db 100644
+index 4aaad11..9448408 100644
 --- a/app/assets/javascripts/issuable_context.js
 +++ b/app/assets/javascripts/issuable_context.js
-@@ -34,7 +34,6 @@
+@@ -37,7 +37,6 @@
            }, 0);
          }
        });
@@ -59,22 +74,41 @@ index 8147e83..bf148db 100644
      }
  
      IssuableContext.prototype.initParticipants = function() {
-diff --git a/app/assets/javascripts/sidebar.js b/app/assets/javascripts/sidebar.js
-index bd0c119..652924c 100644
---- a/app/assets/javascripts/sidebar.js
-+++ b/app/assets/javascripts/sidebar.js
-@@ -12,11 +12,6 @@
-       $('.navbar-fixed-top').toggleClass('header-pinned-nav');
-       $('.page-with-sidebar').toggleClass('page-sidebar-pinned');
+diff --git a/app/assets/javascripts/sidebar.js.es6 b/app/assets/javascripts/sidebar.js.es6
+index 9790a44..c6e486b 100644
+--- a/app/assets/javascripts/sidebar.js.es6
++++ b/app/assets/javascripts/sidebar.js.es6
+@@ -86,10 +86,6 @@
+       const tooltipText = this.isPinned ? 'Unpin navigation' : 'Pin navigation';
+       const tooltipState = $pinnedToggle.attr('aria-describedby') && this.isExpanded ? 'show' : 'hide';
+       $pinnedToggle.attr('title', tooltipText).tooltip('fixTitle').tooltip(tooltipState);
+-
+-      if (this.isExpanded) {
+-        setTimeout(() => $(sidebarContentSelector).niceScroll().updateScrollBar(), 200);
+-      }
      }
--    return setTimeout((function() {
--      var niceScrollBars;
--      niceScrollBars = $('.nav-sidebar').niceScroll();
--      return niceScrollBars.updateScrollBar();
--    }), 300);
-   };
+   }
  
-   $(document).off('click', 'body').on('click', 'body', function(e) {
+diff --git a/app/assets/javascripts/wikis.js.es6 b/app/assets/javascripts/wikis.js.es6
+index ecff5fd..1dbe0e1 100644
+--- a/app/assets/javascripts/wikis.js.es6
++++ b/app/assets/javascripts/wikis.js.es6
+@@ -3,7 +3,6 @@
+ 
+ /*= require latinise */
+ /*= require breakpoints */
+-/*= require jquery.nicescroll */
+ 
+ ((global) => {
+   const dasherize = str => str.replace(/[_\s]+/g, '-');
+@@ -14,7 +13,6 @@
+       this.bp = Breakpoints.get();
+       this.sidebarEl = document.querySelector('.js-wiki-sidebar');
+       this.sidebarExpanded = false;
+-      $(this.sidebarEl).niceScroll();
+ 
+       const sidebarToggles = document.querySelectorAll('.js-sidebar-wiki-toggle');
+       for (let i = 0; i < sidebarToggles.length; i += 1) {
 -- 
-2.7.4
+2.11.0
 

@@ -1,7 +1,7 @@
-From 9606e64a5816b7bae9ed16fbd07ea246f130324b Mon Sep 17 00:00:00 2001
-From: root <root@xenialbase>
-Date: Sat, 16 Jul 2016 07:28:18 +0000
-Subject: [PATCH 2/4] Less pagination for less annoyance
+From 17ac7d20ab9d8ac86f88d71430234b45f4e75d78 Mon Sep 17 00:00:00 2001
+From: Your Name <you@example.com>
+Date: Fri, 27 Jan 2017 07:32:07 +0000
+Subject: [PATCH 2/3] Less pagination for less annoyance
 
 ---
  app/views/shared/projects/_list.html.haml | 2 +-
@@ -9,28 +9,28 @@ Subject: [PATCH 2/4] Less pagination for less annoyance
  2 files changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/app/views/shared/projects/_list.html.haml b/app/views/shared/projects/_list.html.haml
-index 3a9dd37..a3d2b95 100644
+index 3a9dd37..829f8b6 100644
 --- a/app/views/shared/projects/_list.html.haml
 +++ b/app/views/shared/projects/_list.html.haml
 @@ -1,4 +1,4 @@
 -- projects_limit = 20 unless local_assigns[:projects_limit]
-+- projects_limit = 500 unless local_assigns[:projects_limit]
++- projects_limit = 600 unless local_assigns[:projects_limit]
  - avatar = true unless local_assigns[:avatar] == false
  - use_creator_avatar = false unless local_assigns[:use_creator_avatar] == true
  - stars = true unless local_assigns[:stars] == false
 diff --git a/config/initializers/kaminari_config.rb b/config/initializers/kaminari_config.rb
-index 3cbe9a0..0eb17a3 100644
+index 3cbe9a0..759f595 100644
 --- a/config/initializers/kaminari_config.rb
 +++ b/config/initializers/kaminari_config.rb
 @@ -1,6 +1,6 @@
  Kaminari.configure do |config|
 -  config.default_per_page = 20
 -  config.max_per_page = 100
-+  config.default_per_page = 500
-+  config.max_per_page = 500
++  config.default_per_page = 600
++  config.max_per_page = 600
    # config.window = 4
    # config.outer_window = 0
    # config.left = 0
 -- 
-2.7.4
+2.11.0
 
